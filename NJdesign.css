@@ -1,1 +1,27 @@
-// The CSS-script from the NJ-web-design
+/* Description: The CSS-script from the NJ-web-design
+ * Author: Ncoder77
+ * Version: 0.01
+*/
+
+body {
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Button *************************************/
+button {
+    font-family: 'Segoe UI Semibold';
+    color: white;
+    background-color: rgb(0, 120, 215);
+    border: none;
+    padding: 10px 30px 10px 30px;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: rgb(0, 137, 242);
+}
+
+button:active {
+    background-color: rgb(0, 102, 181);
+}
