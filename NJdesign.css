@@ -1,1 +1,14 @@
-// The CSS-script from the NJ-web-design
+/* The CSS-script from the NJ-web-design */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* inputs */
+input {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+    margin: 5px;
+    border: rgb(0, 0, 0);
+    border-width: 50px;
+}
