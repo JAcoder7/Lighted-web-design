@@ -1,1 +1,72 @@
-// The CSS-script from the NJ-web-design
+/* Description: The CSS-script from the NJ-web-design
+ * Author: Ncoder77
+ * Version: 0.01
+*/
+
+body {
+    padding: 20pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: rgb(3, 103, 185);
+}
+
+h2 {
+    padding-top: 15pt;
+}
+
+
+/* Button *************************************/
+button {
+    font-family: 'Segoe UI Semibold';
+    color: white;
+    background-color: rgb(0, 120, 215);
+    padding: 6pt 23pt 6pt 23pt;
+    border: none;
+    border-radius: 3pt;
+}
+
+button:hover {
+    background-color: rgb(0, 137, 242);
+}
+
+button:active {
+    background-color: rgb(0, 102, 181);
+}
+
+
+/* Input *************************************/
+input[type='text'] {
+    border: solid gray 1pt;
+    border-radius: 3pt;
+    padding: 3pt;
+    width: 150pt;
+    height: 17pt;
+}
+
+#errorOutput {
+    color: red;
+}
+
+#warningOutput {
+    color: gray;
+    font-style: italic;
+}
+
+/* Select **********************************/
+select {
+    width: 150pt;
+    height: 25pt;
+    font-family: 'Segoe UI Semibold';
+    background-color: lightgray;
+    border: none;
+    border-radius: 3pt;
+    padding: 5pt;
+}
+
+/* Checkbox *******************************/
+input[type='checkbox'] {
+    width: 30pt;
+    color: red;
+}
