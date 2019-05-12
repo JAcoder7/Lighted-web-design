@@ -12,14 +12,19 @@ h1 {
     color: rgb(3, 103, 185);
 }
 
+h2 {
+    padding-top: 20px;
+}
+
 
 /* Button *************************************/
 button {
     font-family: 'Segoe UI Semibold';
     color: white;
     background-color: rgb(0, 120, 215);
+    padding: 9px 30px 9px 30px;
+    margin-top: 50px;
     border: none;
-    padding: 10px 30px 10px 30px;
     border-radius: 3px;
 }
 
@@ -29,4 +34,28 @@ button:hover {
 
 button:active {
     background-color: rgb(0, 102, 181);
+}
+
+
+/* Input *************************************/
+input {
+    border: solid gray 2px;
+    border-radius: 3px;
+    padding: 6px;
+    width: 200px;
+    height: 20px;
+}
+
+#errorOutput {
+    color: red;
+}
+
+#warningOutput {
+    color: gray;
+    font-style: italic;
+}
+
+/* Select **********************************/
+select {
+
 }
