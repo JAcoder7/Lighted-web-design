@@ -4,7 +4,7 @@
 */
 
 body {
-    padding: 20px;
+    padding: 20pt;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -13,7 +13,7 @@ h1 {
 }
 
 h2 {
-    padding-top: 20px;
+    padding-top: 15pt;
 }
 
 
@@ -22,10 +22,9 @@ button {
     font-family: 'Segoe UI Semibold';
     color: white;
     background-color: rgb(0, 120, 215);
-    padding: 9px 30px 9px 30px;
-    margin-top: 50px;
+    padding: 6pt 23pt 6pt 23pt;
     border: none;
-    border-radius: 3px;
+    border-radius: 3pt;
 }
 
 button:hover {
@@ -38,12 +37,12 @@ button:active {
 
 
 /* Input *************************************/
-input {
-    border: solid gray 2px;
-    border-radius: 3px;
-    padding: 6px;
-    width: 200px;
-    height: 20px;
+input[type='text'] {
+    border: solid gray 1pt;
+    border-radius: 3pt;
+    padding: 3pt;
+    width: 150pt;
+    height: 17pt;
 }
 
 #errorOutput {
@@ -57,5 +56,17 @@ input {
 
 /* Select **********************************/
 select {
+    width: 150pt;
+    height: 25pt;
+    font-family: 'Segoe UI Semibold';
+    background-color: lightgray;
+    border: none;
+    border-radius: 3pt;
+    padding: 5pt;
+}
 
+/* Checkbox *******************************/
+input[type='checkbox'] {
+    width: 30pt;
+    color: red;
 }

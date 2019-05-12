@@ -8,33 +8,35 @@
     <title>Example - NJDesign</title>
 </head>
 <body>
+    <!--header (h1)-->
     <h1>NJDesign example website</h1>
 
     <!--Button-->
     <h2>Button</h2>
-    <div style="display:flexbox;">
-        <input>
-        <button>Button</button>
-        <button onclick="submit()">Submit</button> <!--a submit button (function in own js)-->
-    </div>
+    <button>Button</button>
 
-    <!--Input-->
-    <h2>Input field</h2>
-    <input>
+    <!--Input type="text"-->
+    <h2>Input textfield</h2>
+    <input type="text">
 
     <!--Output: types(id): normalOutput, errorOutput, warningOutput-->
     <h2>Output</h2>
     <output>This is an output</output><br>
     <output id="errorOutput">This is an error output</output><br>
-    <output id="warningOutput">Tis is a warning output</output>
+    <output id="warningOutput">This is a warning output</output>
 
-    <!--Select-->
+    <!--Select (drop down)-->
     <h2>drop down</h2>
     <select>
         <option value="value1">Value1</option>
         <option value="value2">Value2</option>
         <option value="value3">Value3</option>
     </select>
+
+    <!--Checkbox-->
+    <h2>Checkbox</h2>
+    <input type="checkbox">Checkbox 1<br>
+    <input type="checkbox">Checkbox 2<br>
 
 </body>
 <script src="NJdesign.js"></script> <!--default js file, you must implement it-->
