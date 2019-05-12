@@ -9,10 +9,18 @@
     <script src="NJdesign.js"></script> <!--default js file, you must implement it-->
 </head>
 <body>
+    <nav>
+        <elem onclick="toggle_menu();"></elem>
+        <elem onclick="window.location.href = '#';toggle_menu();">Overview</elem>
+        <elem onclick="window.location.href = '#button';toggle_menu();">inputs</elem>
+        <elem onclick="window.location.href = '#progressbar';toggle_menu();">progressbar</elem>
+    </nav>
+
+
     <h1>NJDesign example website</h1>
 
     <!--Button-->
-    <h2>Button</h2>
+    <h2 id="button">Button</h2>
     <div style="display:flexbox;">
         <input>
         <button>Button</button>
@@ -38,13 +46,13 @@
     </select>
 
     <!--Progressbar-->
-    <h2>progressbar</h2>
+    <h2 id="progressbar">progressbar</h2>
     <div class="progressbar" id="pb1"></div>
     <script>
         progressbar("pb1", 160, 50);
     </script>
 
 </body>
-<!--script src="NJdesign.js"></script> <!--default js file, you must implement it-->
+<script src="NJdesign.js"></script> <!--default js file, you must implement it-->
 <script src="example.js"></script> <!--own js file, not necessary-->
 </html>
