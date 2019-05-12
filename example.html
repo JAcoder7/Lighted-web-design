@@ -6,8 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="NJdesign.css">
     <title>Example - NJDesign</title>
+    <script src="NJdesign.js"></script> <!--default js file, you must implement it-->
 </head>
 <body>
+    <nav>
+        <elem onclick="toggle_menu();"></elem>
+        <elem onclick="window.location.href = '#';toggle_menu();">Overview</elem>
+        <elem onclick="window.location.href = '#button';toggle_menu();">inputs</elem>
+        <elem onclick="window.location.href = '#progressbar';toggle_menu();">progressbar</elem>
+    </nav>
+  
     <!--header (h1)-->
     <h1>NJDesign example website</h1>
 
@@ -33,10 +41,12 @@
         <option value="value3">Value3</option>
     </select>
 
-    <!--Checkbox-->
-    <h2>Checkbox</h2>
-    <input type="checkbox">Checkbox 1<br>
-    <input type="checkbox">Checkbox 2<br>
+    <!--Progressbar-->
+    <h2 id="progressbar">progressbar</h2>
+    <div class="progressbar" id="pb1"></div>
+    <script>
+        progressbar("pb1", 160, 50);
+    </script>
 
 </body>
 <script src="NJdesign.js"></script> <!--default js file, you must implement it-->
