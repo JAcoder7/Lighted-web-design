@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="NJdesign.css">
     <title>Example - NJDesign</title>
+    <script src="NJdesign.js"></script> <!--default js file, you must implement it-->
 </head>
 <body>
     <h1>NJDesign example website</h1>
@@ -36,7 +37,14 @@
         <option value="value3">Value3</option>
     </select>
 
+    <!--Progressbar-->
+    <h2>progressbar</h2>
+    <div class="progressbar" id="pb1"></div>
+    <script>
+        progressbar("pb1", 160, 50);
+    </script>
+
 </body>
-<script src="NJdesign.js"></script> <!--default js file, you must implement it-->
+<!--script src="NJdesign.js"></script> <!--default js file, you must implement it-->
 <script src="example.js"></script> <!--own js file, not necessary-->
 </html>

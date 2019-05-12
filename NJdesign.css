@@ -59,4 +59,19 @@ input {
 select {
 
 }
->>>>>>> 8ce603ba6c0336d85972b59083184fe1ac38648c
+
+
+/* progressbar *****************************/
+div.progressbar {
+    width: 150pt;
+    height: 18pt;
+    background-color: rgb(196, 196, 196);
+}
+
+div.progressbar div {
+    width: 0pt;
+    height: 100%;
+    background-color: #0078D7;
+    transition: width 1s;
+    -webkit-transition: width 2s;
+}
