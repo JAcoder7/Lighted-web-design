@@ -35,3 +35,7 @@ Add  ```onclick="window.location.href = 'yourLink';``` to the ```<elem>``` tag a
     <div onclick="window.location.href = 'Yourlink'">Name</div>
 </nav>
 ```
+
+## Icon
+
+We've also added a ```ico``` tag. It uses the icons from the "Segoe MDL2 Assets" font.

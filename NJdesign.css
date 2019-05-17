@@ -11,6 +11,7 @@ body {
 
 h1 {
     color: rgb(3, 103, 185);
+    line-height: 80pt;
 }
 
 h2 {
@@ -97,35 +98,47 @@ nav {
     background-color: rgb(249, 248, 246);
     box-shadow: 0px 0px 10pt 1px rgba(0, 0, 0, 0.3);
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
 }
 
 nav elem {
-    max-width: 20%;
-    min-width: 20%;
+    width: 20%;
     text-align: center;
     cursor: pointer;
     font-size: 13pt;
     padding-top: 18.5pt;
     padding-bottom: 18.5pt;
-    transition: visibility 0.2s;
 }
 
 nav elem:first-child {
-    visibility: hidden;
-    position: absolute;
     font-family: segoe mdl2 assets
 }
 
-nav elem:nth-child(2) {
-    font-family: 'Segoe UI semibold';
+@media screen and (min-width: 400pt) {  /* standart-device */
+    nav {
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+        
+    nav elem {
+        transition: visibility 0.2s;
+        visibility: visible;
+    }
+
+    nav elem:first-child {
+        visibility: hidden;
+        position: absolute;
+        left: -30pt
+    }
+
+    nav elem:nth-child(2) {
+        font-family: 'Segoe UI semibold';
+    }
 }
 
 @media screen and (max-width: 400pt) {  /* mobile-device */
     nav {
         height: 50pt;
-        display: flex;
         align-items: stretch;
         justify-content: flex-start;
         flex-direction: column;
@@ -140,4 +153,21 @@ nav elem:nth-child(2) {
         visibility: visible;
         padding-left: 0; 
     }
+}
+
+/* Icon */
+ico {
+    font-family: segoe mdl2 assets;
+    background-color: rgb(249, 248, 246);
+    box-shadow: 0px 0px 10pt 1px rgba(0, 0, 0, 0.3);
+    padding: 20pt;
+    font-size: 18pt;
+    margin: 20pt;
+    border-radius: 50pt;
+}
+
+/* Image */
+img.NJ-design {
+    box-shadow: 0px 0px 10pt 1px rgba(0, 0, 0, 0.3);
+    border-radius: 10pt;
 }
