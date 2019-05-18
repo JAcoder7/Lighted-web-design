@@ -4,8 +4,14 @@ body {
     padding: 30pt;
     padding-top: 50pt;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url("NJDesign-title-pic.jpg") center top no-repeat;
+    background-position: center top;
+    background-size: contain 100px;
+    background-repeat: no-repeat;
 }
 
+
+/* header *************************************/
 h1 {
     color: rgb(3, 103, 185);
 }
@@ -186,7 +192,7 @@ nav elem:nth-child(2) {
     box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.25);
     border-radius: 10pt;
     padding: 50pt 30pt 30pt 30pt;
-    margin: 20pt;
+    margin: 15pt;
     text-align: center;
 }
 
