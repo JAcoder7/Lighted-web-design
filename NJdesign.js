@@ -1,4 +1,22 @@
 /* The JavaScript from the NJ-web-design */
+var progessbars = document.getElementsByClassName("progressbar");
+var windows = document.getElementsByClassName("window");
+
+var winPos = new Array();
+function init() {
+    console.groupCollapsed("init");
+
+    for (i = 0; i < document.getElementsByClassName("window").length; i++) {
+        windows[i].style = "left: "+i + "00%;";
+        winPos[i] = i + "00";
+        console.count("set window position");    
+    }
+    if (windows.length == 0) {console.warn("windows: ", windows.length);}
+    else {console.info("windows: ", windows.length);}
+    console.info("progessbars: ", progessbars.length);
+    console.groupEnd();
+    console.log("init finished");
+}
 
 function progressbar(id, width, progress) {
     let progressbar = document.getElementById(id);
@@ -8,7 +26,6 @@ function progressbar(id, width, progress) {
 }
 
 var elem = document.getElementsByTagName("elem");
-
 var menuStatus = "close";
 function toggle_menu() {
     if (menuStatus == "close") {
@@ -28,7 +45,45 @@ function toggle_menu() {
     }
 }
 
+function del(str, symbol) {
+    let temp = str.toString();
+    temp = temp.replace(symbol, "");
+    return temp;
+}
 
-function windowChange() {
-    
+
+function windowChange(win) {
+    var changingWin = windows[win];
+    let IDwinLeft = del(changingWin.style.left, "%");
+    console.log(IDwinLeft);
+
+    if (changingWin.style.left != "0px" || changingWin.style.left != "") {
+        if (IDwinLeft < 0) {
+            for (i = 0; 0 == IDwinLeft; i++) {
+                changingWin.style = "left:0; visibility: visible";
+                let win = document.getElementsByClassName("window")[i];
+                win.style.left = "-100%";
+            }        
+            alert("left");
+        }
+        else if (IDwinLeft > 0) {
+            changingWin.style = "visibility: visible";
+            /*for (i = 0; IDwinLeft < 0; i++) {
+                for (i = 0; i < windows.length; i++) {
+                    windows[i].style.left = parseInt(del(windows[i].style.left, "%")) - 100 + "%";
+                    console.count();
+                    IDwinLeft = del(changingWin.style.left, "%");
+                }    
+            }*/
+            for (i = 0; i < windows.length; i++) {
+                windows[i].style.left = winPos[i] - 100 + "%";
+                winPos[i] = winPos[i] - 100;
+                console.count();
+                IDwinLeft = del(changingWin.style.left, "%");
+            }
+            console.info(winPos[0], winPos[1], winPos[2]);
+            IDwinLeft = del(changingWin.style.left, "%");
+            console.info(IDwinLeft);
+        }
+    }
 }

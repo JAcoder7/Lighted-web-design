@@ -10,14 +10,24 @@
 <body>
     <nav>
         <elem onclick="toggle_menu();"></elem>
-        <elem onclick="windowChange()">window 1</elem>
-        <elem onclick="windowChange()">window 2</elem>
+        <elem onclick="windowChange(0)">window 1</elem>
+        <elem onclick="windowChange(1)">window 2</elem>
+        <elem onclick="windowChange(2)">window 3</elem>
     </nav>
-    <div class="window" id="win1">
+    <div class="window">
         <h1>Window 1</h1>
+        <img src="https://indianaffiliateprograms.com/wp-content/uploads/2015/06/Modern-Web-Design-Trends.jpg" width="90%">
     </div>
-    <div class="window" id="win2">
+    <div class="window">
         <h1>Window 2</h1>
+        <img src="https://indianaffiliateprograms.com/wp-content/uploads/2015/06/Modern-Web-Design-Trends.jpg" width="90%">
     </div>
+    <div class="window">
+        <h1>Window 3</h1>
+        <img src="https://indianaffiliateprograms.com/wp-content/uploads/2015/06/Modern-Web-Design-Trends.jpg" width="90%">
+    </div>
+
+
+    <script>init();</script>
 </body>
 </html>

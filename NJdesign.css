@@ -7,6 +7,7 @@ body {
     padding: 30pt;
     padding-top: 50pt;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -148,10 +149,23 @@ nav elem:nth-child(2) {
     left: 100%; top: 50pt;
     width: 100%;
     height: calc(100% - 50pt);
-    padding: 30pt;
+    padding-left: 30pt;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: left 0.5s;
+    visibility: visible;
 }
 
 .window:first-of-type {
-    left: 100%;
+    left: 0%;
+    visibility: visible;
 }
+
+.window#win2 {left:100%}
+.window#win3 {left:200%}
+.window#win4 {left:300%}
+.window#win5 {left:400%}
+.window#win6 {left:500%}
+.window#win7 {left:600%}
+.window#win8 {left:700%}
+.window#win9 {left:800%}
+.window#win10 {left:900%}
