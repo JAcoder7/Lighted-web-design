@@ -6,8 +6,8 @@ var winPos = new Array();
 function init() {
     console.groupCollapsed("init");
 
-    for (i = 0; i < document.getElementsByClassName("window").length; i++) {
-        windows[i].style = "left: "+i + "00%;";
+    for (i = 0; i < windows.length; i++) {
+        windows[i].style = "left: "+ i + "00%;";
         winPos[i] = i + "00";
         console.count("set window position");    
     }
