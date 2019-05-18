@@ -1,10 +1,32 @@
 # NJ-web-design
-
 A Design-API inspirited from Microsoft Fluent Design
 
-## Developers:
+![NJDesgn Image](NJDesign-title-pic.jpg)
+
+## Instructions:
+
+### Developers
 * [JAcoder7](https://github.com/JAcoder7 "go to his github-accont")
 * [Ncoder77](https://github.com/Ncoder77 "go to his github-accont")
+   
+### How to use it
+This design is based on CSS and Javascript. Here is the Code for implementing the components and html elements. For starting with a project, please download these files:   
+```index.html, NJDesgn.css, NJDesign.js```   
+For an example page, please download the ```example.html``` file.   
+So let's start coding with NJDesign API!
+
+### Components
+Already implemented and documentated:
+- Button
+- header (h1, h2, etc.)
+- Drop down (select)
+- Progressbar
+- Navigation
+
+Comings soon:
+- Flexbox Design
+- Head-image
+- Footer
 
 ## Button
 The button, you can implement it like that:
