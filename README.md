@@ -38,4 +38,7 @@ Add  ```onclick="window.location.href = 'yourLink';``` to the ```<elem>``` tag a
 
 ## Icon
 
-We've also added a ```ico``` tag. It uses the icons from the "Segoe MDL2 Assets" font.
+We've also added a ```ico``` css-class. It uses the icons from the "Segoe MDL2 Assets" font.  
+Simply add a ```span``` tag and add the class:  
+```<span class="ico">  </span>```  
+Between the two tags you can add your icon from Segoe MDL2 Assets.
