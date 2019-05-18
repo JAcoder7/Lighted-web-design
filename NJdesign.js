@@ -1,8 +1,8 @@
 /* The JavaScript from the NJ-web-design */
 var progessbars = document.getElementsByClassName("progressbar");
 var windows = document.getElementsByClassName("window");
-
 var winPos = new Array();
+
 function init() {
     console.groupCollapsed("init");
 
@@ -52,24 +52,27 @@ function del(str, symbol) {
     return temp;
 }
 
-
 function windowChange(win) {
     var changingWin = windows[win];
     let IDwinLeft = del(changingWin.style.left, "%");
 
-    if (IDwinLeft < 0) {
-        alert("left");
-    }
-    else if (winPos[win] >= 0) { //right
-        console.info("right");
-        console.info(win, winPos[win]);
-        for (x = winPos[win]; x > 0;) {
+    if (IDwinLeft < 0) { //left
+        for (; winPos[win] != 0;) {
             for (i = 0; i < windows.length; i++) {
-                windows[i].style.left = winPos[i] - 100 + "%";
-                winPos[i] = winPos[i] - 100;
+                winPos[i] = winPos[i] + 100;
+                windows[i].style.left = winPos[i] + "%";
             }
-            console.log(winPos[0], winPos[1], winPos[2]);
         }
-        console.info(winPos[0], winPos[1], winPos[2]);
+        console.info("window positions: ", winPos[0], winPos[1], winPos[2]);
+    }
+    
+    if (winPos[win] > 0) { //right
+        for (; winPos[win] != 0;) {
+            for (i = 0; i < windows.length; i++) {
+                winPos[i] = winPos[i] - 100;
+                windows[i].style.left = winPos[i] + "%";
+            }
+        }
+        console.info("window positions: ", winPos[0], winPos[1], winPos[2]);
     }
 }
