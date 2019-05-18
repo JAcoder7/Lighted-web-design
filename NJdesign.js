@@ -14,6 +14,7 @@ function init() {
     if (windows.length == 0) {console.warn("windows: ", windows.length);}
     else {console.info("windows: ", windows.length);}
     console.info("progessbars: ", progessbars.length);
+    console.info(winPos[0], winPos[1], winPos[2]);
     console.groupEnd();
     console.log("init finished");
 }
@@ -55,35 +56,20 @@ function del(str, symbol) {
 function windowChange(win) {
     var changingWin = windows[win];
     let IDwinLeft = del(changingWin.style.left, "%");
-    console.log(IDwinLeft);
 
-    if (changingWin.style.left != "0px" || changingWin.style.left != "") {
-        if (IDwinLeft < 0) {
-            for (i = 0; 0 == IDwinLeft; i++) {
-                changingWin.style = "left:0; visibility: visible";
-                let win = document.getElementsByClassName("window")[i];
-                win.style.left = "-100%";
-            }        
-            alert("left");
-        }
-        else if (IDwinLeft > 0) {
-            changingWin.style = "visibility: visible";
-            /*for (i = 0; IDwinLeft < 0; i++) {
-                for (i = 0; i < windows.length; i++) {
-                    windows[i].style.left = parseInt(del(windows[i].style.left, "%")) - 100 + "%";
-                    console.count();
-                    IDwinLeft = del(changingWin.style.left, "%");
-                }    
-            }*/
+    if (IDwinLeft < 0) {
+        alert("left");
+    }
+    else if (winPos[win] >= 0) { //right
+        console.info("right");
+        console.info(win, winPos[win]);
+        for (x = winPos[win]; x > 0;) {
             for (i = 0; i < windows.length; i++) {
                 windows[i].style.left = winPos[i] - 100 + "%";
                 winPos[i] = winPos[i] - 100;
-                console.count();
-                IDwinLeft = del(changingWin.style.left, "%");
             }
-            console.info(winPos[0], winPos[1], winPos[2]);
-            IDwinLeft = del(changingWin.style.left, "%");
-            console.info(IDwinLeft);
+            console.log(winPos[0], winPos[1], winPos[2]);
         }
+        console.info(winPos[0], winPos[1], winPos[2]);
     }
 }
