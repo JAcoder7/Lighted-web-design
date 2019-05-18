@@ -77,3 +77,37 @@ Add  ```onclick="window.location.href = 'yourLink';``` to the ```<elem>``` tag a
     <div onclick="window.location.href = 'Yourlink'">Name</div>
 </nav>
 ```
+
+## Flexbox-view
+This is a page layout with flexboxes. You can use a big and asmall layout of the flexboxes. Here is the code for the big one:
+```
+<!--Big flexbox-view-------------------------------------->
+    <div class="flexbox-view">
+
+        <!--Flexbox with image-->
+        <div class="flex-item-b">
+            <img src="defaultImg.png"> <!--Image has to be 100px*100px !-->
+            Flexbox with image...        <!--Text-->
+        </div>
+
+        <!--Flexbox with icon-->
+        <div class="flex-item-b">
+            <div class="flexview-icon-b"></div>  <!--These icons have the font 'Segoe MDL2 Assets'-->
+            and with MDL2 Assets icon     <!--Text-->
+        </div>
+
+        <!--Another two flex-boxes (with image)-->
+        <div class="flex-item-b"><img src="defaultImg.png">Item 3</div>
+        <div class="flex-item-b"><img src="defaultImg.png">Item 4</div>
+    </div>
+```
+And here for the small flexboxes:
+```
+<!--Small flexbox-view------------------------------------>
+    <div class="flexbox-view">
+        <div class="flex-item-s"><img src="defaultImg.png">Item 1</div>
+        <div class="flex-item-s"><div class="flexview-icon-s"></div>Item 2</div>
+        <div class="flex-item-s"><img src="defaultImg.png">Item 3</div>
+        <div class="flex-item-s"><img src="defaultImg.png">Item 4</div>
+    </div>
+```

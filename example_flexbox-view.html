@@ -17,12 +17,38 @@
         <elem onclick="window.location.href = '#progressbar';toggle_menu();">progressbar</elem>
     </nav>
 
-    <!--Flexbox-view-------------------------------------->
+    <h1>Flexbox-view example</h1>
+
+
+    <h2>Big flexbox-view</h2>
+    <!--Big flexbox-view-------------------------------------->
     <div class="flexbox-view">
-        <div class="flex-item">1</div>
-        <div class="flex-item">2</div>
-        <div class="flex-item">3</div>
-        <div class="flex-item">4</div>
+
+        <!--Flexbox with image-->
+        <div class="flex-item-b">
+            <img src="defaultImg.png"> <!--Image has to be 100px*100px !-->
+            Flexbox with image...        <!--Text-->
+        </div>
+
+        <!--Flexbox with icon-->
+        <div class="flex-item-b">
+            <div class="flexview-icon-b"></div>  <!--These icons have the font 'Segoe MDL2 Assets'-->
+            and with MDL2 Assets icon     <!--Text-->
+        </div>
+
+        <!--Another two flex-boxes (with image)-->
+        <div class="flex-item-b"><img src="defaultImg.png">Item 3</div>
+        <div class="flex-item-b"><img src="defaultImg.png">Item 4</div>
+    </div>
+
+
+    <h2>Small flexbox view</h2>
+    <!--Small flexbox-view------------------------------------>
+    <div class="flexbox-view">
+        <div class="flex-item-s"><img src="defaultImg.png">Item 1</div>
+        <div class="flex-item-s"><div class="flexview-icon-s"></div>Item 2</div>
+        <div class="flex-item-s"><img src="defaultImg.png">Item 3</div>
+        <div class="flex-item-s"><img src="defaultImg.png">Item 4</div>
     </div>
 
     <script src="NJdesign.js"></script> <!--default js file, you must implement it-->

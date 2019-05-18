@@ -1,7 +1,4 @@
-/* Description: The CSS-script from the NJ-web-design
- * Author: Ncoder77
- * Version: 0.01
-*/
+/* The CSS-file from the NJ-web-design */
 
 body {
     padding: 30pt;
@@ -140,4 +137,74 @@ nav elem:nth-child(2) {
         visibility: visible;
         padding-left: 0; 
     }
+}
+
+/* flexbox-view ***************************/
+.flexbox-view {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*Big flexbox-view*/
+.flex-item-b {
+    width: 140pt;
+    height: 180pt;
+    background-color: rgb(233, 230, 230);
+    box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.25);
+    border-radius: 10pt;
+    padding: 70pt 30pt 30pt 30pt;
+    margin: 20pt;
+    text-align: center;
+}
+
+.flex-item-b:hover {
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.1s;
+}
+
+.flex-item-b:active {
+    background-color: rgb(236, 234, 234);
+}
+
+.flex-item-b img {
+    padding-bottom: 40pt;
+}
+
+.flexview-icon-b {
+    margin: 20pt 0pt 65pt 0pt;
+    font-family: 'Segoe MDL2 Assets';
+    font-size: 80pt;
+}
+
+/*Small flexbox-view*/
+.flex-item-s {
+    width: 90pt;
+    height: 160pt;
+    min-width: 120pt;
+    background-color: rgb(233, 230, 230);
+    box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.25);
+    border-radius: 10pt;
+    padding: 50pt 30pt 30pt 30pt;
+    margin: 20pt;
+    text-align: center;
+}
+
+.flex-item-s:hover {
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.1s;
+}
+
+.flex-item-s:active {
+    background-color: rgb(236, 234, 234);
+}
+
+.flex-item-s img {
+    padding-bottom: 30pt;
+}
+
+.flexview-icon-s {
+    margin: 30pt 0pt 50pt 0pt;
+    font-family: 'Segoe MDL2 Assets';
+    font-size: 70pt;
 }
