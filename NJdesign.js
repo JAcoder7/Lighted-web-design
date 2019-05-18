@@ -27,3 +27,8 @@ function toggle_menu() {
         menuStatus = "close";
     }
 }
+
+
+function windowChange() {
+    
+}

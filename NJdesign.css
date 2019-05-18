@@ -102,8 +102,8 @@ nav {
 }
 
 nav elem {
-    max-width: 20%;
-    min-width: 20%;
+    max-width: 120pt;
+    min-width: 120pt;
     text-align: center;
     cursor: pointer;
     font-size: 13pt;
@@ -140,4 +140,18 @@ nav elem:nth-child(2) {
         visibility: visible;
         padding-left: 0; 
     }
+}
+
+
+.window {
+    position: absolute;
+    left: 100%; top: 50pt;
+    width: 100%;
+    height: calc(100% - 50pt);
+    padding: 30pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.window:first-of-type {
+    left: 100%;
 }
