@@ -1,5 +1,7 @@
 /* The JavaScript from the NJ-web-design */
 
+
+/* ProgressBar *************************************************************/
 function progressbar(id, width, progress) {
     let progressbar = document.getElementById(id);
     progressbar.style = "width: " + width + "pt;";
@@ -7,6 +9,8 @@ function progressbar(id, width, progress) {
     document.getElementById(id + "b").style = "width: " + width/100*progress + "pt;";
 }
 
+
+/* Menu Bar ***************************************************************/
 var elem = document.getElementsByTagName("elem");
 
 var menuStatus = "close";
@@ -26,4 +30,11 @@ function toggle_menu() {
         elem[0].style = "visibility: visible";
         menuStatus = "close";
     }
+}
+
+/* Header image ********************************************************/
+var body = document.getElementsByTagName("body");
+
+function headerImg(url) {
+    body[0].style = "background: url(\'" + url + "\') no-repeat center top; background-size: auto; background-attachment: scroll";
 }
