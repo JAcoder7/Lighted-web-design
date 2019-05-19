@@ -36,10 +36,7 @@ function progressbar(id, width, progress) {
     let progressbar = document.getElementById(id);
     progressbar.style = "width: " + width + "pt;";
     progressbar.innerHTML = "<div id='" + id + "b'></div>";
-    for (i = 0; i < width/100*progress; i++) {
-        window.setTimeout(function(){ progressbar() }, 500);
-        document.getElementById(id + "b").style = "width: " + i + "pt;";
-    }
+    window.setTimeout(function(){ document.getElementById(id + "b").style = "width: " + width/100*progress + "pt;"; }, 100);
 }
 
 
