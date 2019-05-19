@@ -111,3 +111,10 @@ And here for the small flexboxes:
         <div class="flex-item-s"><img src="defaultImg.png">Item 4</div>
     </div>
 ```
+
+## Header image
+THe header image is very good for the style of your website. Its the first picture at the top, you can also say the "title" picture. It works with javascript , so you have to implement it like that:   
+```
+<script>headerImg("yourImage.jpg", 380);</script>
+```
+First, you add the URL fo your image (```"yourImage.jpg"```), then the size for scaling the image (```380```).

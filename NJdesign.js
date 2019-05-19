@@ -35,6 +35,6 @@ function toggle_menu() {
 /* Header image ********************************************************/
 var body = document.getElementsByTagName("body");
 
-function headerImg(url) {
-    body[0].style = "background: url(\'" + url + "\') no-repeat center top; background-size: auto; background-attachment: scroll";
+function headerImg(url, size) {
+    body[0].style = "background: url(\'" + url + "\') no-repeat center top; background-size: auto " + size +  "pt; background-attachment: scroll";
 }

@@ -7,9 +7,12 @@
 
     <title>Example - NJDesign</title>
 
-    <link rel="stylesheet" href="NJdesign.css"> <!--default css file, you must implement it-->
-    <script src="NJdesign.js"></script> <!--default js file, you must implement it-->
+    <link rel="stylesheet" href="NJdesign.css">     <!--default css file, you must implement it-->
+    <link rel="stylesheet" href="ownstyle.css">     <!--your own css file-->
+    <script src="NJdesign.js"></script>             <!--default js file, you must implement it-->
 </head>
+
+
 <body>
     <!--Navigation-->
     <nav>
@@ -19,11 +22,11 @@
         <elem onclick="window.location.href = '#progressbar';toggle_menu();">progressbar</elem>
     </nav>
 
-    <!--Head image-->
-    <div class="headimg">text</div>
+    <!--Header image-->
+    <script>headerImg("NJDesign-title-pic-scaled.jpg", 380);</script>
 
     <!--header (h1)-->
-    <h1>NJDesign example website</h1>
+    <h1 class="bigHeader">NJDesign example website</h1>
 
     <!--Button-->
     <h2>Button</h2>
@@ -55,6 +58,4 @@
     </script>
 
 </body>
-<script src="NJdesign.js"></script> <!--default js file, you must implement it-->
-<script src="example.js"></script> <!--own js file, not necessary-->
 </html>

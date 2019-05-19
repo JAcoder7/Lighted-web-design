@@ -91,6 +91,7 @@ div.progressbar div {
 nav {
     position: fixed;
     left: 0; top: 0;
+    z-index: 200;
     width: 100%;
     height: 50pt;
     background-color: rgb(249, 248, 246);
