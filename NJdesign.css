@@ -1,7 +1,6 @@
 /* The CSS-file from the NJ-web-design */
 
 body {
-    padding: 30pt;
     padding-top: 50pt;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
@@ -12,7 +11,6 @@ body {
 /* header *************************************/
 h1 {
     color: rgb(3, 103, 185);
-    line-height: 80pt;
 }
 
 h2 {
