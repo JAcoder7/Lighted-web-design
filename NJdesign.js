@@ -1,9 +1,12 @@
 /* The JavaScript from the NJ-web-design */
 
+
 var progessbars = document.getElementsByClassName("progressbar");
 var windows = document.getElementsByClassName("window");
 var winPos = new Array();
 
+
+/* Init *******************************************************************/
 function init() {
     console.groupCollapsed("init");
 
@@ -28,6 +31,7 @@ function mobileDevice() {
 }
 
 
+/* ProgressBar *************************************************************/
 function progressbar(id, width, progress) {
     let progressbar = document.getElementById(id);
     progressbar.style = "width: " + width + "pt;";
@@ -38,6 +42,8 @@ function progressbar(id, width, progress) {
     }
 }
 
+
+/* Menu Bar ***************************************************************/
 var elem = document.getElementsByTagName("elem");
 var menuStatus = "close";
 function toggle_menu() {
@@ -91,4 +97,11 @@ function windowChange(win) {
         }
         console.info("window positions: ", winPos[0], winPos[1], winPos[2]);
     }
+}
+
+/* Header image ********************************************************/
+var body = document.getElementsByTagName("body");
+
+function headerImg(url, size) {
+    body[0].style = "background: url(\'" + url + "\') no-repeat center top; background-size: auto " + size +  "pt; background-attachment: scroll";
 }

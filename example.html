@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="NJdesign.css">
+
     <title>Example - NJDesign</title>
-    <script src="NJdesign.js"></script> <!--default js file, you must implement it-->
+
+    <link rel="stylesheet" href="NJdesign.css">     <!--default css file, you must implement it-->
+    <link rel="stylesheet" href="ownstyle.css">     <!--your own css file-->
+    <script src="NJdesign.js"></script>             <!--default js file, you must implement it-->
 </head>
+
+
 <body>
+    <!--Navigation-->
     <nav>
         <elem onclick="toggle_menu();"></elem>
         <elem onclick="windowChange(0)">basics</elem>
         <elem onclick="windowChange(1)">flexbox view</elem>
     </nav>
+  
+    <!--Header image-->
+    <script>headerImg("NJDesign-title-pic-scaled.jpg", 380);</script>
 
+    <!--Window-->
     <div class="window">
         <!--header (h1)-->
-        <h1>NJDesign example website</h1>
+        <h1 class="bigHeader">NJDesign example website</h1> 
+      
         <!--Output: types(id): normalOutput, errorOutput, warningOutput-->
         <h2>Output</h2>
         <output>This is an output</output><br>
@@ -68,10 +79,38 @@
         </div><br><br>
     </div>
     <div class="window">
-            <h1>Flexbox-view</h1>
+        <!--header (h1)-->
+        <h1 class="bigHeader">Flexbox-view example</h1>
+
+        <h2>Big flexbox-view</h2>
+        <!--Big flexbox-view-------------------------------------->
+        <div class="flexbox-view">
+            <!--Flexbox with image-->
+            <div class="flex-item-b">
+                <img src="defaultImg.png"> <!--Image has to be 100px*100px !-->
+                Flexbox with image...        <!--Text-->
+            </div>
+
+            <!--Flexbox with icon-->
+            <div class="flex-item-b">
+                <div class="flexview-icon-b"></div>  <!--These icons have the font 'Segoe MDL2 Assets'-->
+                and with MDL2 Assets icon     <!--Text-->
+            </div>
+
+            <!--Another two flex-boxes (with image)-->
+            <div class="flex-item-b"><img src="defaultImg.png">Item 3</div>
+            <div class="flex-item-b"><img src="defaultImg.png">Item 4</div>
+        </div>
+
+        <h2>Small flexbox view</h2>
+        <!--Small flexbox-view------------------------------------>
+        <div class="flexbox-view">
+            <div class="flex-item-s"><img src="defaultImg.png">Item 1</div>
+            <div class="flex-item-s"><div class="flexview-icon-s"></div>Item 2</div>
+            <div class="flex-item-s"><img src="defaultImg.png">Item 3</div>
+            <div class="flex-item-s"><img src="defaultImg.png">Item 4</div>
+        </div>
     </div>
 </body>
-<script>init();</script>
-<!--script src="NJdesign.js"></script--> <!--default js file, you must implement it-->
-<script src="example.js"></script> <!--own js file, not necessary-->
+<script>init();</script>  <!--Initialize your components, you must implement it-->
 </html>
