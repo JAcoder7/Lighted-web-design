@@ -17,45 +17,100 @@
     <!--Navigation-->
     <nav>
         <elem onclick="toggle_menu();"></elem>
-        <elem onclick="window.location.href = '#';toggle_menu();">Overview</elem>
-        <elem onclick="window.location.href = '#button';toggle_menu();">inputs</elem>
-        <elem onclick="window.location.href = '#progressbar';toggle_menu();">progressbar</elem>
+        <elem onclick="windowChange(0)">basics</elem>
+        <elem onclick="windowChange(1)">flexbox view</elem>
     </nav>
-
+  
     <!--Header image-->
     <script>headerImg("NJDesign-title-pic-scaled.jpg", 380);</script>
 
-    <!--header (h1)-->
-    <h1 class="bigHeader">NJDesign example website</h1>
+    <!--Window-->
+    <div class="window">
+        <!--header (h1)-->
+        <h1 class="bigHeader">NJDesign example website</h1> 
+      
+        <!--Output: types(id): normalOutput, errorOutput, warningOutput-->
+        <h2>Output</h2>
+        <output>This is an output</output><br>
+        <output id="errorOutput">This is an error output</output><br>
+        <output id="warningOutput">This is a warning output</output>
 
-    <!--Button-->
-    <h2>Button</h2>
-    <button>Button</button>
+        <!--Button-->
+        <h2>Button</h2>
+            <button>Button</button>
+    
+        <!--Input type="text"-->
+        <h2>Input textfield</h2>
+        <input type="text">
 
-    <!--Input type="text"-->
-    <h2>Input textfield</h2>
-    <input type="text">
+        <!--Select (drop down)-->
+        <h2>drop down</h2>
+        <select>
+            <option value="value1">Value1</option>
+            <option value="value2">Value2</option>
+            <option value="value3">Value3</option>
+        </select>
 
-    <!--Output: types(id): normalOutput, errorOutput, warningOutput-->
-    <h2>Output</h2>
-    <output>This is an output</output><br>
-    <output id="errorOutput">This is an error output</output><br>
-    <output id="warningOutput">This is a warning output</output>
+        <!--Progressbar-->
+        <h2 id="progressbar">progressbar</h2>
+        <div class="progressbar" id="pb1"></div>
+        <script>
+            progressbar("pb1", 160, 50);
+        </script>
+      
+        <!--Icon-->
+        <h2>icon</h2><br>
+        <span class="ico"></span><br><br>
 
-    <!--Select (drop down)-->
-    <h2>drop down</h2>
-    <select>
-        <option value="value1">Value1</option>
-        <option value="value2">Value2</option>
-        <option value="value3">Value3</option>
-    </select>
+        <!--Img-->
+        <h2>Image</h2><br>
+        <img class="NJ-design" src="Modern-Web-Design-Trends (1).jpg" width="350pt;"><br>
 
-    <!--Progressbar-->
-    <h2 id="progressbar">progressbar</h2>
-    <div class="progressbar" id="pb1"></div>
-    <script>
-        progressbar("pb1", 160, 50);
-    </script>
+        <!--Notation-->
+        <h2>Notation</h2><br>
+        <span class="note">
+            This is a notation with class="note".<br>
+        </span><br><br>
 
+        <!--Box-->
+        <h2>Box</h2>
+        <div class="NJbox">
+            A simple box with the class "NJbox".
+        </div><br><br>
+    </div>
+    <div class="window">
+        <!--header (h1)-->
+        <h1 class="bigHeader">Flexbox-view example</h1>
+
+        <h2>Big flexbox-view</h2>
+        <!--Big flexbox-view-------------------------------------->
+        <div class="flexbox-view">
+            <!--Flexbox with image-->
+            <div class="flex-item-b">
+                <img src="defaultImg.png"> <!--Image has to be 100px*100px !-->
+                Flexbox with image...        <!--Text-->
+            </div>
+
+            <!--Flexbox with icon-->
+            <div class="flex-item-b">
+                <div class="flexview-icon-b"></div>  <!--These icons have the font 'Segoe MDL2 Assets'-->
+                and with MDL2 Assets icon     <!--Text-->
+            </div>
+
+            <!--Another two flex-boxes (with image)-->
+            <div class="flex-item-b"><img src="defaultImg.png">Item 3</div>
+            <div class="flex-item-b"><img src="defaultImg.png">Item 4</div>
+        </div>
+
+        <h2>Small flexbox view</h2>
+        <!--Small flexbox-view------------------------------------>
+        <div class="flexbox-view">
+            <div class="flex-item-s"><img src="defaultImg.png">Item 1</div>
+            <div class="flex-item-s"><div class="flexview-icon-s"></div>Item 2</div>
+            <div class="flex-item-s"><img src="defaultImg.png">Item 3</div>
+            <div class="flex-item-s"><img src="defaultImg.png">Item 4</div>
+        </div>
+    </div>
 </body>
+<script>init();</script>  <!--Initialize your components, you must implement it-->
 </html>

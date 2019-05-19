@@ -1,5 +1,6 @@
 # NJ-web-design
-A Design-API inspirited from Microsoft Fluent Design
+
+A Design-API using CSS and JavaScript inspirited from Microsoft Fluent Design
 
 ![NJDesgn Image](NJDesign-title-pic.jpg)
 
@@ -14,6 +15,11 @@ This design is based on CSS and Javascript. Here is the Code for implementing th
 ```index.html, NJDesgn.css, NJDesign.js```   
 For an example page, please download the ```example.html``` file.   
 So let's start coding with NJDesign API!
+
+### Initialize
+
+***When you use our design you must first run the JavaScript-function "init();" at the bottom of your html-code:***    
+```<script>init();</script>```
 
 ### Components
 Already implemented and documentated:
@@ -68,13 +74,16 @@ Change the id to the Id from the div and change the width(numbers) and the progr
 ## Navigation
 
 We've made a navigation, wich looks nice and is easy to use:  
-Use the ```<nav>``` tag and insert ```<elem onclick="toggle_menu()"></elem>``` as first element. Then insert elements with the tag ```<elem>```.
-Add  ```onclick="window.location.href = 'yourLink';``` to the ```<elem>``` tag and you are finish!
+Use the ```<nav>``` tag and insert ```<elem onclick="toggle_menu()"></elem>``` as first element.  
+Then insert elements with the tag ```<elem>```.
+Add  ```onclick="windowChange(window_num)"``` to the ```<elem>``` tag and insert the number of the window starting with 0.  
 
+To add a window simply add ```<div class="window"> yourCode </div>``` and put your code between the two tags.  
+#### Example:
 ```
 <nav>
     <elem onclick="toggle_menu();"></elem> <!--Menubutton-->
-    <div onclick="window.location.href = 'Yourlink'">Name</div>
+    <div onclick="windowChange(0)">my new window</div>
 </nav>
 ```
 
@@ -118,3 +127,22 @@ THe header image is very good for the style of your website. Its the first pictu
 <script>headerImg("yourImage.jpg", 380);</script>
 ```
 First, you add the URL fo your image (```"yourImage.jpg"```), then the size for scaling the image (```380```).
+
+## Icon
+
+We've also added a ```ico``` css-class. It uses the icons from the "Segoe MDL2 Assets" font.  
+Simply add a ```span``` tag and add the class:  
+```<span class="ico">  </span>```  
+Between the two tags you can add your icon from Segoe MDL2 Assets.
+
+## Box
+
+To add a simple box, use the ```div``` tag and enter the class "NJbox".
+
+## comments
+
+To add a comment use the class "note".
+
+## image
+
+We have styled images wich you can use with the class ```NJ-design```.
