@@ -69,6 +69,8 @@ function del(str, symbol) {
 function windowChange(win) {
     var changingWin = windows[win];
     let IDwinLeft = del(changingWin.style.left, "%");
+    toggle_menu();
+
 
     if (IDwinLeft < 0) { //left
         for (; winPos[win] != 0;) {
