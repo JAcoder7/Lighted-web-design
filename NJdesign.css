@@ -7,10 +7,13 @@ body {
     padding: 30pt;
     padding-top: 50pt;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    background-color: #faf9f8;
 }
 
 h1 {
     color: rgb(3, 103, 185);
+    line-height: 80pt;
 }
 
 h2 {
@@ -83,7 +86,7 @@ div.progressbar {
 div.progressbar div {
     width: 0pt;
     height: 100%;
-    background-color: #0078D7;
+    background-color: #0078D4;
     transition: width 1s;
 }
 
@@ -94,38 +97,52 @@ nav {
     left: 0; top: 0;
     width: 100%;
     height: 50pt;
-    background-color: rgb(249, 248, 246);
-    box-shadow: 0px 0px 10pt 1px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    box-shadow: 0 1.6px 3.8px 0 rgba(0,0,0,0.2);
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    z-index: 100;
 }
 
 nav elem {
-    max-width: 20%;
-    min-width: 20%;
+    width: 200pt;
     text-align: center;
     cursor: pointer;
     font-size: 13pt;
     padding-top: 18.5pt;
     padding-bottom: 18.5pt;
-    transition: visibility 0.2s;
 }
 
 nav elem:first-child {
-    visibility: hidden;
-    position: absolute;
-    font-family: segoe mdl2 assets
+    font-family: segoe mdl2 assets;
 }
 
-nav elem:nth-child(2) {
-    font-family: 'Segoe UI semibold';
+@media screen and (min-width: 400pt) {  /* standart-device */
+    nav {
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+        
+    nav elem {
+        transition: visibility 0.2s;
+        visibility: visible;
+    }
+
+    nav elem:first-child {
+        visibility: hidden;
+        position: absolute;
+        left: -30pt
+    }
+
+    nav elem:nth-child(2) {
+        font-family: 'Segoe UI semibold';
+        font-size: 16pt;
+    }
 }
 
 @media screen and (max-width: 400pt) {  /* mobile-device */
     nav {
         height: 50pt;
-        display: flex;
         align-items: stretch;
         justify-content: flex-start;
         flex-direction: column;
@@ -134,10 +151,66 @@ nav elem:nth-child(2) {
     nav elem {
         padding-left: 20pt;
         visibility: hidden;
+        text-align: left;
     }
     nav elem:first-child {
         position: relative;
         visibility: visible;
-        padding-left: 0; 
+        padding-left: 25pt; 
     }
+}
+
+
+/* windows *************************************/
+.window {
+    position: absolute;
+    left: 100%; top: 50pt;
+    width: 100%;
+    height: calc(100% - 50pt);
+    padding-left: 30pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: left 0.5s;
+    visibility: visible;
+}
+
+.window:first-of-type {
+    left: 0%;
+    visibility: visible;
+}
+
+/* Icon */
+.ico {
+    font-family: segoe mdl2 assets;
+    background-color: rgb(249, 248, 246);
+    box-shadow: 0px 0px 10pt 1px rgba(0, 0, 0, 0.3);
+    padding: 20pt;
+    font-size: 18pt;
+    margin: 20pt;
+    border-radius: 50pt;
+}
+
+/* Image */
+img.NJ-design {
+    box-shadow: 0 1.6px 3.6px 0 rgba(0,0,0,0.132), 0 0.3px 0.9px 0 rgba(0,0,0,0.108);
+    border-radius: 5pt;
+}
+
+/* Notations */
+.note {
+    padding-left: 10pt;
+    border-left: solid;
+    border-color: #0078D4;
+    font-style: italic;
+}
+
+/* box ********************************************/
+div.NJbox {
+    box-shadow: 0 1.6px 3.6px 0 rgba(0,0,0,0.2), 0 0.3px 0.9px 0 rgba(0,0,0,0.2);
+    border-radius: 5pt;
+    width: 195pt;
+    height: 100pt;
+    background-color: #fff;
+    padding: 25pt;
+    border-radius: 2px;
+    text-align: center;
 }

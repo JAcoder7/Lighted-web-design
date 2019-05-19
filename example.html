@@ -11,44 +11,67 @@
 <body>
     <nav>
         <elem onclick="toggle_menu();"></elem>
-        <elem onclick="window.location.href = '#';toggle_menu();">Overview</elem>
-        <elem onclick="window.location.href = '#button';toggle_menu();">inputs</elem>
-        <elem onclick="window.location.href = '#progressbar';toggle_menu();">progressbar</elem>
+        <elem onclick="windowChange(0)">basics</elem>
+        <elem onclick="windowChange(1)">flexbox view</elem>
     </nav>
-  
-    <!--header (h1)-->
-    <h1>NJDesign example website</h1>
 
-    <!--Button-->
-    <h2>Button</h2>
-    <button>Button</button>
+    <div class="window">
+        <!--header (h1)-->
+        <h1>NJDesign example website</h1>
+        <!--Output: types(id): normalOutput, errorOutput, warningOutput-->
+        <h2>Output</h2>
+        <output>This is an output</output><br>
+        <output id="errorOutput">This is an error output</output><br>
+        <output id="warningOutput">This is a warning output</output>
 
-    <!--Input type="text"-->
-    <h2>Input textfield</h2>
-    <input type="text">
+        <!--Button-->
+        <h2>Button</h2>
+            <button>Button</button>
+    
+        <!--Input type="text"-->
+        <h2>Input textfield</h2>
+        <input type="text">
 
-    <!--Output: types(id): normalOutput, errorOutput, warningOutput-->
-    <h2>Output</h2>
-    <output>This is an output</output><br>
-    <output id="errorOutput">This is an error output</output><br>
-    <output id="warningOutput">This is a warning output</output>
+        <!--Select (drop down)-->
+        <h2>drop down</h2>
+        <select>
+            <option value="value1">Value1</option>
+            <option value="value2">Value2</option>
+            <option value="value3">Value3</option>
+        </select>
 
-    <!--Select (drop down)-->
-    <h2>drop down</h2>
-    <select>
-        <option value="value1">Value1</option>
-        <option value="value2">Value2</option>
-        <option value="value3">Value3</option>
-    </select>
+        <!--Progressbar-->
+        <h2 id="progressbar">progressbar</h2>
+        <div class="progressbar" id="pb1"></div>
+        <script>
+            progressbar("pb1", 160, 50);
+        </script>
+      
+        <!--Icon-->
+        <h2>icon</h2><br>
+        <span class="ico"></span><br><br>
 
-    <!--Progressbar-->
-    <h2 id="progressbar">progressbar</h2>
-    <div class="progressbar" id="pb1"></div>
-    <script>
-        progressbar("pb1", 160, 50);
-    </script>
+        <!--Img-->
+        <h2>Image</h2><br>
+        <img class="NJ-design" src="Modern-Web-Design-Trends (1).jpg" width="350pt;"><br>
 
+        <!--Notation-->
+        <h2>Notation</h2><br>
+        <span class="note">
+            This is a notation with class="note".<br>
+        </span><br><br>
+
+        <!--Box-->
+        <h2>Box</h2>
+        <div class="NJbox">
+            A simple box with the class "NJbox".
+        </div><br><br>
+    </div>
+    <div class="window">
+            <h1>Flexbox-view</h1>
+    </div>
 </body>
-<script src="NJdesign.js"></script> <!--default js file, you must implement it-->
+<script>init();</script>
+<!--script src="NJdesign.js"></script--> <!--default js file, you must implement it-->
 <script src="example.js"></script> <!--own js file, not necessary-->
 </html>
