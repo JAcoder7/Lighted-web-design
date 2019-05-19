@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="NJdesign.css"> <!--default css file, you must implement it-->
     <title>Document</title>
+
+    <link rel="stylesheet" href="NJdesign.css"> <!--default css file, you must implement it-->
+    <link rel="stylesheet" href="ownstyle.css">     <!--your own css file-->
     <script src="NJdesign.js"></script> <!--default js file, you must implement it-->
 </head>
 <body>
-    <!--Navigation, not important (you can leave it out)-->
+    <!--Navigation-->
     <nav>
         <elem onclick="toggle_menu();"></elem>
         <elem onclick="window.location.href = '#';toggle_menu();">Overview</elem>
@@ -17,8 +19,11 @@
         <elem onclick="window.location.href = '#progressbar';toggle_menu();">progressbar</elem>
     </nav>
 
-    <h1>Flexbox-view example</h1>
+    <!--Header image-->
+    <script>headerImg("NJDesign-title-pic-scaled.jpg", 380);</script>
 
+    <!--header (h1)-->
+    <h1 class="bigHeader">Flexbox-view example</h1>
 
     <h2>Big flexbox-view</h2>
     <!--Big flexbox-view-------------------------------------->
