@@ -35,3 +35,10 @@ Add  ```onclick="window.location.href = 'yourLink';``` to the ```<elem>``` tag a
     <div onclick="window.location.href = 'Yourlink'">Name</div>
 </nav>
 ```
+
+## Icon
+
+We've also added a ```ico``` css-class. It uses the icons from the "Segoe MDL2 Assets" font.  
+Simply add a ```span``` tag and add the class:  
+```<span class="ico">  </span>```  
+Between the two tags you can add your icon from Segoe MDL2 Assets.
