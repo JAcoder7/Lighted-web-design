@@ -282,3 +282,14 @@ div.NJbox {
     border-radius: 2px;
     text-align: center;
 }
+
+/* footer *****************************************/
+.footer {
+    width: 100%;
+    padding: 20pt 10pt 20pt 10pt;
+    background-color: black;
+    color: white;
+}
+.footer span {
+    padding: 0px 30px 0px 30px;
+}
