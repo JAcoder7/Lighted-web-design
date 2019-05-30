@@ -1,7 +1,6 @@
 /* The CSS-file from the NJ-web-design */
 
 body {
-    padding-top: 50pt;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
     background-color: #faf9f8;
@@ -285,11 +284,28 @@ div.NJbox {
 
 /* footer *****************************************/
 .footer {
+    position: relative;
+    left: 0pt;
+    bottom: 0pt;
     width: 100%;
     padding: 20pt 10pt 20pt 10pt;
-    background-color: black;
-    color: white;
+    background-color: rgb(240, 240, 240);
 }
-.footer span {
-    padding: 0px 30px 0px 30px;
+
+.footer a.header {
+    font-weight: 500;
+    color: rgb(58, 58, 58);
+    margin: 0pt 30pt 0pt 30pt;
+    text-decoration: none;
+    font-size: 12pt;
 }
+
+.footer a {
+    text-decoration: none;
+    color: rgb(94, 94, 94);
+    font-size: 11pt;
+    margin: 0pt 50pt 0pt 50pt;
+}
+
+.footer a:hover {text-decoration: underline}
+.footer a:active {color: rgb(141, 141, 141)}
