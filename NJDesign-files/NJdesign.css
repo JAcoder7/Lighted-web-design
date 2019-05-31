@@ -168,8 +168,8 @@ nav elem:first-child {
 .flex-item-b {
     width: 140pt;
     height: 180pt;
-    background-color: rgb(233, 230, 230);
-    box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.25);
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.192);
     border-radius: 10pt;
     padding: 70pt 30pt 30pt 30pt;
     margin: 20pt;
@@ -182,7 +182,7 @@ nav elem:first-child {
 }
 
 .flex-item-b:active {
-    background-color: rgb(236, 234, 234);
+    background-color: rgb(245, 245, 245);
 }
 
 .flex-item-b img {
@@ -200,8 +200,8 @@ nav elem:first-child {
     width: 90pt;
     height: 160pt;
     min-width: 120pt;
-    background-color: rgb(233, 230, 230);
-    box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.25);
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.192);
     border-radius: 10pt;
     padding: 50pt 30pt 30pt 30pt;
     margin: 15pt;
@@ -214,7 +214,7 @@ nav elem:first-child {
 }
 
 .flex-item-s:active {
-    background-color: rgb(236, 234, 234);
+    background-color: rgb(245, 245, 245);
 }
 
 .flex-item-s img {
