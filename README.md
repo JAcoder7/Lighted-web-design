@@ -27,7 +27,7 @@ Already implemented and documentated:
 - header (h1, h2, etc.)
 - Drop down (select)
 - Progressbar
-- Navigation
+- Navigation  
 
 Comings soon:
 - Flexbox Design
