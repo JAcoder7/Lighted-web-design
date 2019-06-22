@@ -1,10 +1,4 @@
 # Lighted-web-design
-<link rel="stylesheet" href="Lighted-web-Design-files/LightedDesign.css">
-<style>
-    body {
-        background-color: #ffff;
-    }
-</style>
 
 A Design-API using CSS and JavaScript inspirited from Microsoft Fluent Design
 
@@ -42,7 +36,7 @@ So let's start coding with Lighted-web-design API!
 
 
 **Comings soon:**
-- 
+- search (with IDs)
 
 
 ## Output
@@ -50,9 +44,9 @@ So let's start coding with Lighted-web-design API!
 
 You can use the ```<output></output>``` tag to create an new output.  
 
-<output id="errorOutput">Error:   Use the class ```errorOutput```</output>  
-<output id="warningOutput">Warning:   Use the class ```warningOutput```</output>  
-<output class="note">Notation:   Use the class ```note```</output>  
+**Error:**   Use the class ```errorOutput```  
+**Warning:**   Use the class ```warningOutput```  
+**Notation:**   Use the class ```note```  
 
 
 ## input textfield
@@ -66,7 +60,6 @@ With Placeholder: ``` <input type="text" name="yourInput" placeholder="yourPlace
 
 ## Button
 
-<button>Button</button>  <br><br>
 The button, you can implement it like that:
 ``` 
 <Button>Text of the button</Button>
