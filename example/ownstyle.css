@@ -1,3 +1,7 @@
+body {
+    padding-top: 50pt; /*This is for the nav bar*/
+}
+
 .bigHeader {
     position: relative;
     left: 0%;

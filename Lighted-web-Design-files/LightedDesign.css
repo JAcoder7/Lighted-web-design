@@ -1,7 +1,6 @@
 /* The CSS-file from the NJ-web-design */
 
 body {
-    padding-top: 50pt;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
     background-color: #faf9f8;
@@ -76,14 +75,14 @@ input[type='checkbox'] {
 /* progressbar *****************************/
 div.progressbar {
     width: 150pt;
-    height: 18pt;
-    background-color: rgb(196, 196, 196);
+    height: 17pt;
+    background-color: rgb(191, 191, 191);
 }
 
 div.progressbar div {
     width: 0pt;
     height: 100%;
-    background-color: #0078D4;
+    background-color: rgb(0, 176, 240);
     transition: width 1s;
 }
 
@@ -232,10 +231,8 @@ nav elem:first-child {
 .window {
     position: absolute;
     left: 100%; top: 50pt;
-    width: calc(100% - 60pt);
-    height: calc(100% - 50pt);
-    padding-left: 30pt;
-    padding-right: 30pt;
+    width: calc(100%);
+    height: calc(100%);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: left 0.5s;
     visibility: visible;
@@ -258,7 +255,7 @@ nav elem:first-child {
 }
 
 /* Image */
-img.NJ-design {
+img.lwd {
     box-shadow: 0 1.6px 3.6px 0 rgba(0,0,0,0.132), 0 0.3px 0.9px 0 rgba(0,0,0,0.108);
     border-radius: 5pt;
 }
@@ -272,7 +269,7 @@ img.NJ-design {
 }
 
 /* box ********************************************/
-div.NJbox {
+div.lwd {
     box-shadow: 0 1.6px 3.6px 0 rgba(0,0,0,0.2), 0 0.3px 0.9px 0 rgba(0,0,0,0.2);
     border-radius: 5pt;
     width: 195pt;
@@ -282,3 +279,31 @@ div.NJbox {
     border-radius: 2px;
     text-align: center;
 }
+
+/* footer *****************************************/
+.footer {
+    position: relative;
+    left: 0pt;
+    bottom: 0pt;
+    width: 100%;
+    padding: 20pt 10pt 20pt 10pt;
+    background-color: rgb(240, 240, 240);
+}
+
+.footer a.header {
+    font-weight: 500;
+    color: rgb(58, 58, 58);
+    margin: 0pt 30pt 0pt 30pt;
+    text-decoration: none;
+    font-size: 12pt;
+}
+
+.footer a {
+    text-decoration: none;
+    color: rgb(94, 94, 94);
+    font-size: 11pt;
+    margin: 0pt 50pt 0pt 50pt;
+}
+
+.footer a:hover {text-decoration: underline}
+.footer a:active {color: rgb(141, 141, 141)}
