@@ -231,10 +231,8 @@ nav elem:first-child {
 .window {
     position: absolute;
     left: 100%; top: 50pt;
-    width: calc(100% - 60pt);
-    height: calc(100% - 50pt);
-    padding-left: 30pt;
-    padding-right: 30pt;
+    width: calc(100%);
+    height: calc(100%);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: left 0.5s;
     visibility: visible;
@@ -257,7 +255,7 @@ nav elem:first-child {
 }
 
 /* Image */
-img.NJ-design {
+img.lwd {
     box-shadow: 0 1.6px 3.6px 0 rgba(0,0,0,0.132), 0 0.3px 0.9px 0 rgba(0,0,0,0.108);
     border-radius: 5pt;
 }
@@ -271,7 +269,7 @@ img.NJ-design {
 }
 
 /* box ********************************************/
-div.NJbox {
+div.lwd {
     box-shadow: 0 1.6px 3.6px 0 rgba(0,0,0,0.2), 0 0.3px 0.9px 0 rgba(0,0,0,0.2);
     border-radius: 5pt;
     width: 195pt;

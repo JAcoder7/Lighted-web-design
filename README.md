@@ -1,8 +1,14 @@
-# NJ-web-design
+# Lighted-web-design
+<link rel="stylesheet" href="Lighted-web-Design-files/LightedDesign.css">
+<style>
+    body {
+        background-color: #ffff;
+    }
+</style>
 
 A Design-API using CSS and JavaScript inspirited from Microsoft Fluent Design
 
-![NJDesgn Image](NJDesign-title-pic.jpg)
+![Lighted-web-design Image](LightedDesign-title-pic.jpg)
 
 ## Instructions:
 
@@ -11,10 +17,9 @@ A Design-API using CSS and JavaScript inspirited from Microsoft Fluent Design
 * [Ncoder77](https://github.com/Ncoder77 "go to his github-accont")
    
 ### How to use it
-This design is based on CSS and Javascript. Here is the Code for implementing the components and html elements. For starting with a project, please download these files:   
-```index.html, NJDesgn.css, NJDesign.js```   
-For an example page, please download the ```example.html``` file.   
-So let's start coding with NJDesign API!
+This design is based on CSS and Javascript. Here is the Code for implementing the components and html elements. For starting with a project, please download the folder ```Lighted-web-Design-files```  
+For an example page, please download the ```example.html``` file from the ```example``` folder.   
+So let's start coding with Lighted-web-design API!
 
 ### Initialize
 
@@ -22,19 +27,46 @@ So let's start coding with NJDesign API!
 ```<script>init();</script>```
 
 ### Components
-Already implemented and documentated:
-- Button
-- header (h1, h2, etc.)
-- Drop down (select)
-- Progressbar
-- Navigation  
+**Already implemented and documentated:**
+- [output](#output)
+- [input textfield](#input)
+- [Button](#button)
+- [header (h1, h2, etc.)](#header)
+- [Drop down (select)](#Drop-down)
+- [Progressbar](#Progressbar)
+- [Navigation](#Navigation)  
+- [Icon](#Icon)  
+- [Flexbox-view](#Flexbox-view)  
+- [Head-image](#Head-image)  
+- [Footer](#Footer)  
 
-Comings soon:
-- Flexbox Design
-- Head-image
-- Footer
+
+**Comings soon:**
+- 
+
+
+## Output
+
+
+You can use the ```<output></output>``` tag to create an new output.  
+
+<output id="errorOutput">Error:   Use the class ```errorOutput```</output>  
+<output id="warningOutput">Warning:   Use the class ```warningOutput```</output>  
+<output class="note">Notation:   Use the class ```note```</output>  
+
+
+## input textfield
+
+The input, you can implement it like that:
+```
+    <input type="text" name="yourInput">
+```
+With Placeholder: ``` <input type="text" name="yourInput" placeholder="yourPlaceholder"> ```   
+
 
 ## Button
+
+<button>Button</button>  <br><br>
 The button, you can implement it like that:
 ``` 
 <Button>Text of the button</Button>
@@ -42,16 +74,18 @@ The button, you can implement it like that:
 For Javascript: ``` <Button onclick="yourfunction()"></Button> ```   
 
 ## Header
+
 There are multiple headers: h1, h2, h3, ...
 The ```<h1>``` tag is very good for the title of a sub-page.
 
 ## Drop down
+
 This is the syntax for a drop down selection:
 ```
-<select>
-    <option value="value1">option 1</option>
-    <option value="value2">option 2</option>
-</select>
+    <select>
+        <option value="value1">option 1</option>
+        <option value="value2">option 2</option>
+    </select>
 ```
 The ```value=""``` is for javascript.
 
@@ -86,6 +120,15 @@ To add a window simply add ```<div class="window"> yourCode </div>``` and put yo
     <div onclick="windowChange(0)">my new window</div>
 </nav>
 ```
+
+## Icon
+
+
+We've also added a ```ico``` css-class. It uses the icons from the "Segoe MDL2 Assets" font.  
+Simply add a ```span``` tag and add the class:  
+```<span class="ico">  </span>```  
+Between the two tags you can add your icon from Segoe MDL2 Assets.
+
 
 ## Flexbox-view
 This is a page layout with flexboxes. You can use a big and asmall layout of the flexboxes. Here is the code for the big one:
@@ -128,21 +171,3 @@ THe header image is very good for the style of your website. Its the first pictu
 ```
 First, you add the URL fo your image (```"yourImage.jpg"```), then the size for scaling the image (```380```).
 
-## Icon
-
-We've also added a ```ico``` css-class. It uses the icons from the "Segoe MDL2 Assets" font.  
-Simply add a ```span``` tag and add the class:  
-```<span class="ico">  </span>```  
-Between the two tags you can add your icon from Segoe MDL2 Assets.
-
-## Box
-
-To add a simple box, use the ```div``` tag and enter the class "NJbox".
-
-## comments
-
-To add a comment use the class "note".
-
-## image
-
-We have styled images wich you can use with the class ```NJ-design```.

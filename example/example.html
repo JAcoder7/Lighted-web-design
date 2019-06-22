@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Example - NJDesign</title>
+    <title>Example - Lighted-web-Design</title>
 
-    <link rel="stylesheet" href="../NJDesign-files/NJdesign.css">     <!--default css file, you must implement it-->
+    <link rel="stylesheet" href="../Lighted-web-Design-files/LightedDesign.css">     <!--default css file, you must implement it-->
     <link rel="stylesheet" href="ownstyle.css">     <!--your own css file-->
-    <script src="../NJDesign-files/NJdesign.js"></script>             <!--default js file, you must implement it-->
+    <script src="../Lighted-web-Design-files/LightedDesign.js"></script>             <!--default js file, you must implement it-->
 </head>
 
 
@@ -22,66 +22,64 @@
     </nav>
   
     <!--Header image-->
-    <script>headerImg("NJDesign-title-pic-scaled.jpg", 380);</script>
+    <script>headerImg("Lighted-Design-title-pic-scaled.jpg", 380);</script>
 
     <!--Window-->
     <div class="window">
-        <!--header (h1)-->
-        <h1 class="bigHeader">NJDesign example website</h1> 
-      
-        <!--Output: types(id): normalOutput, errorOutput, warningOutput-->
-        <h2>Output</h2>
-        <output>This is an output</output><br>
-        <output id="errorOutput">This is an error output</output><br>
-        <output id="warningOutput">This is a warning output</output>
+        <main style="padding-left: 30pt">
+            <!--header (h1)-->
+            <h1 class="bigHeader">Lighted-web-design example website</h1> 
+        
+            <!--Output: types(id): normalOutput, errorOutput, warningOutput-->
+            <h2>Output</h2>
+            <output>This is an output</output><br>
+            <output id="errorOutput">This is an error output</output><br>
+            <output id="warningOutput">This is a warning output</output><br><br>
+            <output class="note">This is a notation</output>
+            <br><br>            
 
-        <!--Button-->
-        <h2>Button</h2>
+            <!--Button-->
+            <h2>Button</h2>
             <button>Button</button>
-    
-        <!--Input type="text"-->
-        <h2>Input textfield</h2>
-        <input type="text">
+        
+            <!--Input type="text"-->
+            <h2>Input textfield</h2>
+            <input type="text">
 
-        <!--Select (drop down)-->
-        <h2>drop down</h2>
-        <select>
-            <option value="value1">Value1</option>
-            <option value="value2">Value2</option>
-            <option value="value3">Value3</option>
-        </select>
+            <!--Select (drop down)-->
+            <h2>drop down</h2>
+            <select>
+                <option value="value1">Value1</option>
+                <option value="value2">Value2</option>
+                <option value="value3">Value3</option>
+            </select>
 
-        <!--Progressbar-->
-        <h2 id="progressbar">progressbar</h2>
-        <div class="progressbar" id="pb1"></div>
-        <script>
-            progressbar("pb1", 160, 50);
-        </script>
-      
-        <!--Icon-->
-        <h2>icon</h2><br>
-        <span class="ico"></span><br><br>
+            <!--Progressbar-->
+            <h2 id="progressbar">progressbar</h2>
+            <div class="progressbar" id="pb1"></div>
+            <script>
+                progressbar("pb1", 160, 50);
+            </script>
+        
+            <!--Icon-->
+            <h2>icon</h2><br>
+            <span class="ico"></span><br><br>
 
-        <!--Img-->
-        <h2>Image</h2><br>
-        <img class="NJ-design" src="../NJDesign-title-pic.jpg" width="350pt;"><br>
+            <!--Img-->
+            <h2>Image</h2><br>
+            <img class="lwd" src="../LightedDesign-title-pic.jpg" width="350pt;"><br>
 
-        <!--Notation-->
-        <h2>Notation</h2><br>
-        <span class="note">
-            This is a notation with class="note".<br>
-        </span><br><br>
 
-        <!--Box-->
-        <h2>Box</h2>
-        <div class="NJbox">
-            A simple box with the class "NJbox".
-        </div>
-
+            <!--Box-->
+            <h2>Box</h2>
+            <div class="lwd">
+                A simple box with the class "NJbox".
+            </div>
         <!--Footer-->
         <h2>Footer</h2>
+        </main>
         <div class="footer">
-            <a href="" class="header">© NJDesign API 2019</a>       <!--header of the footer-->
+            <a href="" class="header">© Lighted-web-Design API 2019</a>       <!--header of the footer-->
             <a href="">Link 1</a>           <!--Link-->
             <a href="">Link 2</a>           <!--Link-->
             <a href="">Link 3</a>           <!--Link-->
@@ -90,42 +88,44 @@
         </div>
     </div>
     <div class="window">
-        <!--header (h1)-->
-        <h1 class="bigHeader">Flexbox-view example</h1>
+        <main style="padding-left: 30pt">
+            <!--header (h1)-->
+            <h1 class="bigHeader">Flexbox-view example</h1>
 
-        <h2>Big flexbox-view</h2>
-        <!--Big flexbox-view-------------------------------------->
-        <div class="flexbox-view">
-            <!--Flexbox with image-->
-            <div class="flex-item-b">
-                <img src="defaultImg.png"> <!--Image has to be 100px*100px !-->
-                Flexbox with image...        <!--Text-->
+            <h2>Big flexbox-view</h2>
+            <!--Big flexbox-view-------------------------------------->
+            <div class="flexbox-view">
+                <!--Flexbox with image-->
+                <div class="flex-item-b">
+                    <img src="defaultImg.png"> <!--Image has to be 100px*100px !-->
+                    Flexbox with image...        <!--Text-->
+                </div>
+
+                <!--Flexbox with icon-->
+                <div class="flex-item-b">
+                    <div class="flexview-icon-b"></div>  <!--These icons have the font 'Segoe MDL2 Assets'-->
+                    and with MDL2 Assets icon     <!--Text-->
+                </div>
+
+                <!--Another two flex-boxes (with image)-->
+                <div class="flex-item-b"><img src="defaultImg.png">Item 3</div>
+                <div class="flex-item-b"><img src="defaultImg.png">Item 4</div>
             </div>
 
-            <!--Flexbox with icon-->
-            <div class="flex-item-b">
-                <div class="flexview-icon-b"></div>  <!--These icons have the font 'Segoe MDL2 Assets'-->
-                and with MDL2 Assets icon     <!--Text-->
+            <h2>Small flexbox view</h2>
+            <!--Small flexbox-view------------------------------------>
+            <div class="flexbox-view">
+                <div class="flex-item-s"><img src="defaultImg.png">Item 1</div>
+                <div class="flex-item-s"><div class="flexview-icon-s"></div>Item 2</div>
+                <div class="flex-item-s"><img src="defaultImg.png">Item 3</div>
+                <div class="flex-item-s"><img src="defaultImg.png">Item 4</div>
             </div>
-
-            <!--Another two flex-boxes (with image)-->
-            <div class="flex-item-b"><img src="defaultImg.png">Item 3</div>
-            <div class="flex-item-b"><img src="defaultImg.png">Item 4</div>
-        </div>
-
-        <h2>Small flexbox view</h2>
-        <!--Small flexbox-view------------------------------------>
-        <div class="flexbox-view">
-            <div class="flex-item-s"><img src="defaultImg.png">Item 1</div>
-            <div class="flex-item-s"><div class="flexview-icon-s"></div>Item 2</div>
-            <div class="flex-item-s"><img src="defaultImg.png">Item 3</div>
-            <div class="flex-item-s"><img src="defaultImg.png">Item 4</div>
-        </div>
 
         <!--Footer-->
         <h2>Footer</h2>
+        </main>
         <div class="footer">
-            <a href="" class="header">© NJDesign API 2019</a>       <!--header of the footer-->
+            <a href="" class="header">© Lighted-web-design API 2019</a>       <!--header of the footer-->
             <a href="">Link 1</a>           <!--Link-->
             <a href="">Link 2</a>           <!--Link-->
             <a href="">Link 3</a>           <!--Link-->
