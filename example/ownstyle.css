@@ -6,12 +6,12 @@ body {
     position: relative;
     left: 0%;
     right: 0%;
-    top: 100pt;
+    top: 150pt;
     z-index: 1;
-    background-color: white;
+    color: white;
     font-size: 30pt;
     text-align: center;
     padding: 15pt 0pt 15pt 0pt;
-    margin: 0pt 10% 270pt 10%;
+    margin: 0pt 10% 400pt 10%;
     border-radius: 10pt;
 }

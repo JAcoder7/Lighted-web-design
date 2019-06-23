@@ -168,8 +168,8 @@ nav elem:first-child {
 .flex-item-b {
     width: 140pt;
     height: 180pt;
-    background-color: rgb(233, 230, 230);
-    box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.25);
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.192);
     border-radius: 10pt;
     padding: 70pt 30pt 30pt 30pt;
     margin: 20pt;
@@ -182,7 +182,7 @@ nav elem:first-child {
 }
 
 .flex-item-b:active {
-    background-color: rgb(236, 234, 234);
+    background-color: rgb(245, 245, 245);
 }
 
 .flex-item-b img {
@@ -200,8 +200,8 @@ nav elem:first-child {
     width: 90pt;
     height: 160pt;
     min-width: 120pt;
-    background-color: rgb(233, 230, 230);
-    box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.25);
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.192);
     border-radius: 10pt;
     padding: 50pt 30pt 30pt 30pt;
     margin: 15pt;
@@ -214,7 +214,7 @@ nav elem:first-child {
 }
 
 .flex-item-s:active {
-    background-color: rgb(236, 234, 234);
+    background-color: rgb(245, 245, 245);
 }
 
 .flex-item-s img {
@@ -307,3 +307,29 @@ div.lwd {
 
 .footer a:hover {text-decoration: underline}
 .footer a:active {color: rgb(141, 141, 141)}
+
+
+/*ListView*****************************************/
+table.listView {
+    border-top: solid 1pt rgb(196, 196, 196);
+    border-spacing: 0pt;
+}
+
+td {border-bottom: solid 1pt rgb(196, 196, 196);}
+
+.listView tr td {width: 280pt; padding-right: 5pt;}
+.listView tr td:first-child {padding: 5pt;width: 0pt;}
+
+
+/* File Input **********************************/
+#button-file {
+    font-family: 'Segoe UI Semibold';
+    background-color: rgb(216, 216, 216);
+    padding: 6pt 23pt 6pt 23pt;
+    border-radius: 3pt;
+    border: none;
+}
+#button-file:hover {
+    cursor: pointer;
+    background-color: rgb(223, 223, 223)
+}
