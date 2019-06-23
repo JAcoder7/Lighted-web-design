@@ -171,13 +171,13 @@ The ListView is similar to a table with three columns. It has an icon image, the
 <table class='listView'>
     <!--First row-->
     <tr>
-        <td><img src="defaultImg.png" width="32px"></td> <!--The image icon-->
+        <td><img src="defaultImg.png" width="32px" height="32px"></td> <!--The image icon-->
         <td>This is the Name</td>
         <td>Some more informations</td>
     </tr>
     <!--Second row-->
     <tr>
-        <td><img src="defaultImg.png" width="32px"></td> <!--The image icon-->
+        <td><img src="defaultImg.png" width="32px" height="32px"></td> <!--The image icon-->
         <td>This is the Name</td>
         <td>Some more informations</td>
     </tr>
