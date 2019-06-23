@@ -36,13 +36,10 @@ So let's start coding with Lighted-web-design API!
 - [ListView](#ListView)  
 - [File input](#file-input)
 
-
 **Comings soon:**
 - search (with IDs)
 
-
 ## Output
-
 
 You can use the ```<output></output>``` tag to create an new output.  
 
