@@ -30,16 +30,31 @@ function mobileDevice() {
     } else {return(false);}
 }
 
+function getSize() {
+    var myWidth = 0, myHeight = 0;
+
+    if( typeof( window.innerWidth ) == 'number' ) {
+        //Non-IE
+        myWidth = window.innerWidth;
+        myHeight = window.innerHeight;
+    } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+        //IE 6+ in 'standards compliant mode'
+        myWidth = document.documentElement.clientWidth;
+        myHeight = document.documentElement.clientHeight;
+    } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+        //IE 4 compatible
+        myWidth = document.body.clientWidth;
+        myHeight = document.body.clientHeight;
+    }
+    return [ myWidth, myHeight ];
+}
 
 /* ProgressBar *************************************************************/
 function progressbar(id, width, progress) {
     let progressbar = document.getElementById(id);
     progressbar.style = "width: " + width + "pt;";
     progressbar.innerHTML = "<div id='" + id + "b'></div>";
-    for (i = 0; i < width/100*progress; i++) {
-        window.setTimeout(function(){ progressbar() }, 500);
-        document.getElementById(id + "b").style = "width: " + i + "pt;";
-    }
+    window.setTimeout(function(){ document.getElementById(id + "b").style = "width: " + width/100*progress + "pt;"; }, 100);
 }
 
 
@@ -47,7 +62,7 @@ function progressbar(id, width, progress) {
 var elem = document.getElementsByTagName("elem");
 var menuStatus = "close";
 function toggle_menu() {
-    if (mobileDevice()) {
+    if (getSize()[0] <= "550") {
         if (menuStatus == "close") {
             document.getElementsByTagName("nav")[0].style = "height: 100%;";
             for (i = 0; i < elem.length; i++) {
