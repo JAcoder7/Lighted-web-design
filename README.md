@@ -2,7 +2,7 @@
 
 A Design-API using CSS and JavaScript inspirited from Microsoft Fluent Design
 
-![Lighted-web-design Image](LightedDesign-title-pic.jpg)
+![Lighted-web-design Image](LightedDesign-title-pic.png)
 
 ## Instructions:
 
@@ -17,7 +17,7 @@ So let's start coding with Lighted-web-design API!
 
 ### Initialize
 
-***When you use our design you must first run the JavaScript-function "init();" at the bottom of your html-code:***    
+***When you use our design you must first run the JavaScript-function "init();" at the bottom of your html-code:***
 ```<script>init();</script>```
 
 ### Components
@@ -33,6 +33,8 @@ So let's start coding with Lighted-web-design API!
 - [Flexbox-view](#Flexbox-view)  
 - [Head-image](#Head-image)  
 - [Footer](#Footer)  
+- [ListView](#ListView)  
+- [File input](#file-input)
 
 
 **Comings soon:**
@@ -115,8 +117,6 @@ To add a window simply add ```<div class="window"> yourCode </div>``` and put yo
 ```
 
 ## Icon
-
-
 We've also added a ```ico``` css-class. It uses the icons from the "Segoe MDL2 Assets" font.  
 Simply add a ```span``` tag and add the class:  
 ```<span class="ico">  </span>```  
@@ -164,3 +164,40 @@ THe header image is very good for the style of your website. Its the first pictu
 ```
 First, you add the URL fo your image (```"yourImage.jpg"```), then the size for scaling the image (```380```).
 
+
+## ListView
+The ListView is similar to a table with three columns. It has an icon image, then the name and in the third column you can add detail informations. Here is an example with two rows:
+```
+<table class='listView'>
+    <!--First row-->
+    <tr>
+        <td><img src="defaultImg.png" width="32px"></td> <!--The image icon-->
+        <td>This is the Name</td>
+        <td>Some more informations</td>
+    </tr>
+    <!--Second row-->
+    <tr>
+        <td><img src="defaultImg.png" width="32px"></td> <!--The image icon-->
+        <td>This is the Name</td>
+        <td>Some more informations</td>
+    </tr>
+</table>
+```
+
+## File Input
+We've styled a ```<input type="file">``` button which is normally very difficult because you cannot style it with a CSS class. THis is the workaround using a second Button and adding the function with JQuery: First you have to implement JQuery in the ```<head>```:
+```
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+```
+Add the input and the JQuery-script in the ```<body>```:
+```
+<Input type="file" id="input-file">
+
+<script>
+    $('#input-file').before('<input type="button" id="button-file" value="Your Button text" />');
+    $('#input-file').hide();
+    $('body').on('click', '#button-file', function() { 
+        $('#input-file').trigger('click');
+    });
+</script>
+```

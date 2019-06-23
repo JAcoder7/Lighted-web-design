@@ -307,3 +307,29 @@ div.lwd {
 
 .footer a:hover {text-decoration: underline}
 .footer a:active {color: rgb(141, 141, 141)}
+
+
+/*ListView*****************************************/
+table.listView {
+    border-top: solid 1pt rgb(196, 196, 196);
+    border-spacing: 0pt;
+}
+
+td {border-bottom: solid 1pt rgb(196, 196, 196);}
+
+.listView tr td {width: 280pt; padding-right: 5pt;}
+.listView tr td:first-child {padding: 5pt;width: 0pt;}
+
+
+/* File Input **********************************/
+#button-file {
+    font-family: 'Segoe UI Semibold';
+    background-color: rgb(216, 216, 216);
+    padding: 6pt 23pt 6pt 23pt;
+    border-radius: 3pt;
+    border: none;
+}
+#button-file:hover {
+    cursor: pointer;
+    background-color: rgb(223, 223, 223)
+}

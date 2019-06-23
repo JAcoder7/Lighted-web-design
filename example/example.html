@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../Lighted-web-Design-files/LightedDesign.css">     <!--default css file, you must implement it-->
     <link rel="stylesheet" href="ownstyle.css">     <!--your own css file-->
     <script src="../Lighted-web-Design-files/LightedDesign.js"></script>             <!--default js file, you must implement it-->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>                 <!-- JQuery for the file input-->
 </head>
 
 
@@ -22,13 +23,13 @@
     </nav>
   
     <!--Header image-->
-    <script>headerImg("Lighted-Design-title-pic-scaled.jpg", 380);</script>
+    <script>headerImg("LightedDesign-title-pic-scaled.png", 500);</script>
 
     <!--Window-->
     <div class="window">
         <main style="padding-left: 30pt">
             <!--header (h1)-->
-            <h1 class="bigHeader">Lighted-web-design example website</h1> 
+            <h1 class="bigHeader">Lighted-web-design example</h1> 
         
             <!--Output: types(id): normalOutput, errorOutput, warningOutput-->
             <h2>Output</h2>
@@ -60,6 +61,26 @@
             <script>
                 progressbar("pb1", 160, 50);
             </script>
+
+            <!--ListView-->
+            <h2>ListView</h2>
+            <table class='listView'>
+                <tr>
+                    <td><img src="defaultImg.png" width="32px"></td> <!--The image icon-->
+                    <td>This is the Name</td>
+                    <td>Some more informations</td>
+                </tr>
+                <tr>
+                    <td><img src="defaultImg.png" width="32px"></td> <!--The image icon-->
+                    <td>This is the Name</td>
+                    <td>Some more informations</td>
+                </tr>
+                <tr>
+                    <td><img src="defaultImg.png" width="32px"></td> <!--The image icon-->
+                    <td>This is the Name</td>
+                    <td>Some more informations</td>
+                </tr>
+            </table>
         
             <!--Icon-->
             <h2>icon</h2><br>
@@ -67,7 +88,7 @@
 
             <!--Img-->
             <h2>Image</h2><br>
-            <img class="lwd" src="../LightedDesign-title-pic.jpg" width="350pt;"><br>
+            <img class="lwd" src="../LightedDesign-title-pic.png" width="350pt;"><br>
 
 
             <!--Box-->
@@ -75,8 +96,21 @@
             <div class="lwd">
                 A simple box with the class "lwd".
             </div>
-        <!--Footer-->
-        <h2>Footer</h2>
+
+            <!--File input-->
+            <h2>File Input</h2>
+            <Input type="file" id="input-file">
+
+            <script>
+                $('#input-file').before('<input type="button" id="button-file" value="Choose file" />');
+                $('#input-file').hide();
+                $('body').on('click', '#button-file', function() { 
+                    $('#input-file').trigger('click');
+                });
+            </script>
+
+            <!--Footer-->
+            <h2>Footer</h2>
         </main>
         <div class="footer">
             <a href="" class="header">© Lighted-web-Design API 2019</a>       <!--header of the footer-->
