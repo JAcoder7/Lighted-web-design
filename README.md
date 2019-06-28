@@ -11,7 +11,11 @@ A Design-API using CSS and JavaScript inspirited from Microsoft Fluent Design
 * [Ncoder77](https://github.com/Ncoder77 "go to his github-accont")
    
 ### How to use it
-This design is based on CSS and Javascript. Here is the Code for implementing the components and html elements. For starting with a project, please download the folder ```Lighted-web-Design-files```  
+This design is based on CSS and Javascript. First, you have to implement this code in the ```<head>```.
+
+    <link rel="stylesheet" href="https://jacoder7.github.io/Lighted-web-design/LightedDesign.css">
+    <script src="https://jacoder7.github.io/Lighted-web-design/LightedDesign.js"></script>
+
 For an example page, please download the ```example.html``` file from the ```example``` folder.   
 So let's start coding with Lighted-web-design API!
 
