@@ -6,6 +6,10 @@ body {
     background-color: #faf9f8;
 }
 
+.acrylic {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10pt);
+}
 
 /* header *************************************/
 h1 {
@@ -94,8 +98,10 @@ nav {
     z-index: 200;
     width: 100%;
     height: 50pt;
-    background-color: #fff;
     box-shadow: 0 1.6px 3.8px 0 rgba(0,0,0,0.2);
+    background-color: rgba(255, 255, 255, 0.50);
+    backdrop-filter: blur(10pt);
+
     display: flex;
     z-index: 100;
 }
@@ -332,4 +338,10 @@ td {border-bottom: solid 1pt rgb(196, 196, 196);}
 #button-file:hover {
     cursor: pointer;
     background-color: rgb(223, 223, 223)
+}
+
+
+/* download-window ***********************************/
+#download-window {
+    
 }
