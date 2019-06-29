@@ -19,6 +19,11 @@ function init() {
     else {console.info("windows: ", windows.length);}
     console.info("progessbars: ", progessbars.length);
     console.info(winPos[0], winPos[1], winPos[2]);
+
+    /* download_window */
+    document.write("<div style='visibility:hidden' id='download_window'><div id='download_window_background' onclick='close_download_window()''></div><div id='download_window-pane1'><header id='download_window_name'>Nicht vorhanden</header><a id='download_window_button' href='' download><button style='float:right;'>Download</button></a><div id='download_window_pane2'><img id='download_window_image' src='' width='400px'></div></div></div>");
+    console.info("download_window prepared");
+
     console.groupEnd();
     console.log("init finished");
 }
@@ -119,4 +124,16 @@ var body = document.getElementsByTagName("body");
 
 function headerImg(url, size) {
     body[0].style = "background: url(\'" + url + "\') no-repeat center top; background-size: auto " + size +  "pt; background-attachment: scroll";
+}
+
+function download_window(src, img, title) {
+    var download_window = document.getElementById("download_window");
+    download_window.style = "visibility: visible;";
+    document.getElementById("download_window_button").href = src;
+    document.getElementById("download_window_image").src = img;
+    document.getElementById("download_window_name").innerHTML = title;
+}
+
+function close_download_window() {
+    document.getElementById("download_window").style = "visibility: hidden;"
 }

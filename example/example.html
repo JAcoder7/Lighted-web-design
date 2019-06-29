@@ -7,10 +7,10 @@
 
     <title>Example - Lighted-web-Design</title>
 
-    <link rel="stylesheet" href="https://jacoder7.github.io/Lighted-web-design/LightedDesign.css">     <!--default css file, you must implement it-->
-    <link rel="stylesheet" href="ownstyle.css">     <!--your own css file-->
-    <script src="https://jacoder7.github.io/Lighted-web-design/LightedDesign.js"></script>             <!--default js file, you must implement it-->
-    <script src="https://code.jquery.com/jquery-latest.js"></script>                 <!-- JQuery for the file input-->
+    <link rel="stylesheet" href="../docs/LightedDesign.css">                <!--default css file, you must implement it-->
+    <link rel="stylesheet" href="ownstyle.css">                             <!--your own css file-->
+    <script src="../docs/LightedDesign.js"></script>                        <!--default js file, you must implement it-->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>        <!-- JQuery for the file input-->
 </head>
 
 
@@ -109,6 +109,10 @@
                 });
             </script>
 
+            <!--Download-window-->
+            <h2>Download-window</h2>
+            <button onclick="download_window('../LightedDesign-title-pic.png', '../LightedDesign-title-pic.png', 'Lighted-web-design image')">Download</button>
+
             <!--Footer-->
             <h2>Footer</h2>
         </main>
@@ -122,15 +126,6 @@
         </div>
 
 
-        <div style='visibility:hidden' id='store_download'>
-            <div class="store-download-pane1 box-shadow">
-                <header id="store_download_name">Nicht vorhanden</header>
-                <a id="store_download_button" href="" download><button style="float:right;" class="fluent box-shadow">Download</button></a>
-                <div class="store-download-pane2">
-                    <img id="store_download_image" src="" width="400px">
-                </div>
-            </div>
-        </div>
 
     </div>
     <div class="window">
