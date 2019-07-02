@@ -86,25 +86,26 @@ This is the syntax for a drop down selection:
 The ```value=""``` is for javascript.
 
 ## Progressbar
-To add a progessbar, add the tag "div" and change the class to "progressbar" and add an Id.  
+To add a progessbar, add the tag ```div``` and add the class "progressbar".  
 
 ```
- <div class="progressbar" id="yourID"></div>
+<div class="progressbar"></div>
 ```
 
-Next, run the function progressbar(id, width, progress).
-Change the id to the Id from the div and change the width(numbers) and the progress(%).
+Next, you have to insert first the value in percent and then the width of the progressbar between the two tags.
 
+**example:**
 ```
-<script>
-    progressbar("yourID", width, progress);
-</script>
+                    value     width
+                       \       /
+                        \     /
+<div class="progressbar">50,160</div>
 ```
 
 ## Navigation
 
 We've made a navigation, wich looks nice and is easy to use:  
-Use the ```<nav>``` tag and insert ```<elem onclick="toggle_menu()"></elem>``` as first element.  
+Use the ```<nav>``` tag.
 Then insert elements with the tag ```<elem>```.
 Add  ```onclick="windowChange(window_num)"``` to the ```<elem>``` tag and insert the number of the window starting with 0.  
 

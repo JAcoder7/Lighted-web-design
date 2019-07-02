@@ -2,22 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="wißdth=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Example - Lighted-web-Design</title>
 
-    <link rel="stylesheet" href="https://jacoder7.github.io/Lighted-web-design/LightedDesign.css">     <!--default css file, you must implement it-->
-    <link rel="stylesheet" href="ownstyle.css">     <!--your own css file-->
-    <script src="https://jacoder7.github.io/Lighted-web-design/LightedDesign.js"></script>             <!--default js file, you must implement it-->
-    <script src="https://code.jquery.com/jquery-latest.js"></script>                 <!-- JQuery for the file input-->
+    <link rel="stylesheet" href="../docs/LightedDesign.css">                <!--default css file, you must implement it-->
+    <link rel="stylesheet" href="ownstyle.css">                             <!--your own css file-->
+    <script src="../docs/LightedDesign.js"></script>                        <!--default js file, you must implement it-->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>        <!-- JQuery for the file input-->
 </head>
 
 
 <body>
     <!--Navigation-->
     <nav>
-        <elem onclick="toggle_menu();"></elem>
         <elem onclick="windowChange(0)">basics</elem>
         <elem onclick="windowChange(1)">flexbox view</elem>
     </nav>
@@ -42,7 +41,7 @@
             <!--Button-->
             <h2>Button</h2>
             <button>Button</button>
-        
+
             <!--Input type="text"-->
             <h2>Input textfield</h2>
             <input type="text">
@@ -57,10 +56,11 @@
 
             <!--Progressbar-->
             <h2 id="progressbar">progressbar</h2>
-            <div class="progressbar" id="pb1"></div>
-            <script>
-                progressbar("pb1", 160, 50);
-            </script>
+            <div class="progressbar">50,160</div>
+
+            <!--ToggleSwitch-->
+            <h2 id="toggleSwitch">toggleSwitch</h2>
+            <button class="toggleSwitch" id="TS1" checked="false"></button>
 
             <!--ListView-->
             <h2>ListView</h2>
@@ -109,6 +109,10 @@
                 });
             </script>
 
+            <!--Download-window-->
+            <h2>Download-window</h2>
+            <button onclick="download_window('../LightedDesign-title-pic.png', '../LightedDesign-title-pic.png', 'Lighted-web-design image')">Download</button>
+
             <!--Footer-->
             <h2>Footer</h2>
         </main>
@@ -120,6 +124,9 @@
             <a href="">Link 4</a>           <!--Link-->
             <a href="">Link 5</a>           <!--Link-->
         </div>
+
+
+
     </div>
     <div class="window">
         <main style="padding-left: 30pt">
