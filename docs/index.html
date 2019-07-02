@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Test Document</title>
-    <link href="/docs/LightedDesign.css">
+    <link rel="stylesheet" href="../docs/LightedDesign.css">                <!--default css file, you must implement it-->
+    <link rel="stylesheet" href="index.css">                             <!--your own css file-->
+    <script src="../docs/LightedDesign.js"></script>                        <!--default js file, you must implement it-->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>        <!-- JQuery for the file input-->
 </head>
 <body>
-    <h1>asdfghj</h1>
+    <nav>
+        <elem onclick='windowChange(0)'>Lighted-web-design</elem>
+        <elem onclick='link("../example/example.html")'>example</elem>
+    </nav>
+    <script>init();</script>
 </body>
 </html>

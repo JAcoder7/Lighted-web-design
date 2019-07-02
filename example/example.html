@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="wißdth=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Example - Lighted-web-Design</title>
@@ -17,7 +17,6 @@
 <body>
     <!--Navigation-->
     <nav>
-        <elem onclick="toggle_menu();"></elem>
         <elem onclick="windowChange(0)">basics</elem>
         <elem onclick="windowChange(1)">flexbox view</elem>
     </nav>
@@ -42,7 +41,7 @@
             <!--Button-->
             <h2>Button</h2>
             <button>Button</button>
-        
+
             <!--Input type="text"-->
             <h2>Input textfield</h2>
             <input type="text">
@@ -57,10 +56,11 @@
 
             <!--Progressbar-->
             <h2 id="progressbar">progressbar</h2>
-            <div class="progressbar" id="pb1"></div>
-            <script>
-                progressbar("pb1", 160, 50);
-            </script>
+            <div class="progressbar">50,160</div>
+
+            <!--ToggleSwitch-->
+            <h2 id="toggleSwitch">toggleSwitch</h2>
+            <button class="toggleSwitch" id="TS1" checked="false"></button>
 
             <!--ListView-->
             <h2>ListView</h2>
