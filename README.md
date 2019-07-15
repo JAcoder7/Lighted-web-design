@@ -39,6 +39,9 @@ So let's start coding with Lighted-web-design API!
 - [Footer](#Footer)  
 - [ListView](#ListView)  
 - [File input](#file-input)
+- [download-window](#download-window)
+- [File input](#file-input)
+
 
 **Comings soon:**
 - search (with IDs)
@@ -187,6 +190,7 @@ The ListView is similar to a table with three columns. It has an icon image, the
 ```
 
 ## File Input
+
 We've styled a ```<input type="file">``` button which is normally very difficult because you cannot style it with a CSS class. THis is the workaround using a second Button and adding the function with JQuery: First you have to implement JQuery in the ```<head>```:
 ```
 <script src="https://code.jquery.com/jquery-latest.js"></script>
@@ -202,4 +206,14 @@ Add the input and the JQuery-script in the ```<body>```:
         $('#input-file').trigger('click');
     });
 </script>
+```
+
+## Download-window
+
+We've added a Download-window which looks good and is very easy to implement with javaScript.  
+The only thing you have to do is to add a onclick-event to your element which runs the function download_window().
+
+**Example:**
+```
+<button onclick="download_window('source', 'image', 'title')">
 ```
