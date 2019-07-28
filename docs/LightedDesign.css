@@ -62,6 +62,42 @@ input[type='text'] {
     height: 17pt;
 }
 
+input[type='range'] {
+    border-radius: 5pt;
+    -webkit-appearance: none;
+    width: 150pt;
+    height: 4pt;
+    background: var(--edge-border-rest);
+    outline: none;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    background: #0078D4;
+    cursor: pointer;
+}
+
+input[type='range']::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    background: #0078D4;
+    cursor: pointer;
+}
+
+input[type='range']::-moz-range-thumb:hover {background: #006cbe;}
+input[type='range']::-moz-range-thumb:active {background: #006cbe;}
+
+
+
 #errorOutput {
     color: red;
 }
@@ -116,23 +152,35 @@ nav {
     box-shadow: 0 1.6px 3.8px 0 rgba(0,0,0,0.2);
     background-color: rgba(255, 255, 255, 0.85);
     -webkit-backdrop-filter: blur(10px) saturate(125%);
-    backdrop-filter: blur(10px) saturate(125%);
+    backdrop-filter: blur(10px) notsaturate(125%);
     display: flex;
     z-index: 100;
 }
 
 nav elem {
-    width: 200pt;
+    min-width: 130pt;
     text-align: center;
     cursor: pointer;
-    font-size: 13pt;
-    padding-top: 18.5pt;
-    padding-bottom: 18.5pt;
+    font-size: 12pt;
+    padding-top: 17pt;
+    padding-bottom: 17pt;
+    padding-left: 15pt;
+    padding-right: 15pt;
+}
+
+nav elem:hover {
+    background-color: rgba(221, 221, 221, 0.534);
 }
 
 nav elem:first-child {
     font-family: segoe mdl2 assets;
+    font-size: 16pt;
 }
+
+nav elem:first-child:hover {
+    background-color: rgba(255, 255, 255, 0);
+}
+
 
 @media screen and (min-width: 400pt) {  /* standart-device */
     nav {
@@ -152,10 +200,6 @@ nav elem:first-child {
         left: -30pt
     }
 
-    nav elem:nth-child(2) {
-        font-family: 'Segoe UI semibold';
-        font-size: 16pt;
-    }
 }
 
 @media screen and (max-width: 400pt) {  /* mobile-device */
@@ -166,11 +210,13 @@ nav elem:first-child {
         flex-direction: column;
         transition: height 0.3s;
     }
+
     nav elem {
         padding-left: 20pt;
         visibility: hidden;
         text-align: left;
     }
+
     nav elem:first-child {
         position: relative;
         visibility: visible;
@@ -269,7 +315,7 @@ nav elem:first-child {
     font-family: segoe mdl2 assets;
     background-color: rgb(249, 248, 246);
     box-shadow: 0px 0px 10pt 1px rgba(0, 0, 0, 0.3);
-    padding: 20pt;
+    padding: 15pt;
     font-size: 18pt;
     margin: 20pt;
     border-radius: 50pt;
@@ -285,7 +331,7 @@ img.lwd {
 .note {
     padding-left: 10pt;
     border-left: solid;
-    border-color: --lwd-blue;
+    border-color: var(--lwd-blue);
     font-style: italic;
 }
 
@@ -442,7 +488,7 @@ button.toggleSwitch {
     left: 0px;
     position: absolute;
     top: 0px;
-    transition: background-color linear 80ms;
+    transition: background-color linear 0.08s;
     width: 42px;
     z-index: 0;
 }
@@ -480,4 +526,29 @@ button.toggleSwitch {
     background-color: white;
     border: 1px solid white;
     transform: translate3d(24px, 0, 0);
+}
+
+
+/*scrollbar****************************************************/
+::-webkit-scrollbar {
+    width: 7pt;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(240, 240, 240);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #55aaeb;
+    height: 10pt;
+    border-radius: 5pt;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #1081D7;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #0070C6;
 }

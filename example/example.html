@@ -46,6 +46,12 @@
             <h2>Input textfield</h2>
             <input type="text">
 
+            <!--Input type="range"-->
+            <h2>slider</h2>
+            <input type="range" max="100" id="slider1"><br>
+            <span id="sliderOutput"></span>
+            <script>getSliderInOutput("slider1", "sliderOutput");</script>
+
             <!--Select (drop down)-->
             <h2>drop down</h2>
             <select>
@@ -61,6 +67,16 @@
             <!--ToggleSwitch-->
             <h2 id="toggleSwitch">toggleSwitch</h2>
             <button class="toggleSwitch" id="TS1" checked="false"></button>
+            <span id="TSout">off</span>
+            <script>
+                document.getElementById("TS1").onmouseover = function() {
+                    if(this.getAttribute("checked") == "false") {
+                        document.getElementById("TSout").innerHTML = "off";
+                    } else {
+                        document.getElementById("TSout").innerHTML = "on";
+                    }
+                }    
+            </script>
 
             <!--ListView-->
             <h2>ListView</h2>

@@ -212,3 +212,17 @@ function setToggleSwitch(id, value) {
         toggleSwitch.setAttribute("checked", "false");
     }
 }
+
+
+/* Slider *****************************************/
+function getSliderInOutput(sliderID, outputID) {
+    let slider = document.getElementById(sliderID);
+    let output = document.getElementById(outputID);
+    slider.oninput = function() {
+        output.innerHTML = this.value;
+    }
+}
+
+function getSlider(ID) {
+    return document.getElementById(ID).value;
+}
