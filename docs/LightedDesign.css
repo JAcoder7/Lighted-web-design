@@ -236,6 +236,8 @@ nav elem:first-child:hover {
     width: 140pt;
     height: 180pt;
     background-color: rgb(240, 240, 240);
+    color: black;
+    text-decoration: none;
     box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.192);
     border-radius: 10pt;
     padding: 70pt 30pt 30pt 30pt;
@@ -268,6 +270,8 @@ nav elem:first-child:hover {
     height: 160pt;
     min-width: 120pt;
     background-color: rgb(240, 240, 240);
+    color: black;
+    text-decoration: none;
     box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.192);
     border-radius: 10pt;
     padding: 50pt 30pt 30pt 30pt;
