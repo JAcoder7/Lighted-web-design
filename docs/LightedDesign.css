@@ -341,13 +341,13 @@ img.lwd {
 
 /* box ********************************************/
 div.lwd {
-    box-shadow: 0 1.6px 3.6px 0 rgba(0,0,0,0.2), 0 0.3px 0.9px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 1.6px 10px 0 rgba(0,0,0,0.2), 0 0.3px 0.9px 0 rgba(0,0,0,0.2);
     border-radius: 5pt;
     width: 195pt;
     height: 100pt;
     background-color: #fff;
     padding: 25pt;
-    border-radius: 2px;
+    border-radius: 5px;
     text-align: center;
 }
 
@@ -555,4 +555,21 @@ button.toggleSwitch {
 
 ::-webkit-scrollbar-thumb:active {
     background-color: #0070C6;
+}
+
+/* Gallery-Image **********************************/
+.gallery {
+    box-shadow: 0 1.6px 10px 0 rgba(0,0,0,0.2), 0 0.3px 0.9px 0 rgba(0,0,0,0.2);
+    border-radius: 5pt;
+    width: 200pt;
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    padding-bottom: 20pt;
+}
+
+.gallery img {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
