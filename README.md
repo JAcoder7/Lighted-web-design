@@ -39,6 +39,9 @@ So let's start coding with Lighted-web-design API!
 - [Footer](#Footer)  
 - [ListView](#ListView)  
 - [File input](#file-input)
+- [download-window](#download-window)
+- [File input](#file-input)
+
 
 **Comings soon:**
 - search (with IDs)
@@ -86,25 +89,26 @@ This is the syntax for a drop down selection:
 The ```value=""``` is for javascript.
 
 ## Progressbar
-To add a progessbar, add the tag "div" and change the class to "progressbar" and add an Id.  
+To add a progessbar, add the tag ```div``` and add the class "progressbar".  
 
 ```
- <div class="progressbar" id="yourID"></div>
+<div class="progressbar"></div>
 ```
 
-Next, run the function progressbar(id, width, progress).
-Change the id to the Id from the div and change the width(numbers) and the progress(%).
+Next, you have to insert first the value in percent and then the width of the progressbar between the two tags.
 
+**example:**
 ```
-<script>
-    progressbar("yourID", width, progress);
-</script>
+                    value     width
+                       \       /
+                        \     /
+<div class="progressbar">50,160</div>
 ```
 
 ## Navigation
 
 We've made a navigation, wich looks nice and is easy to use:  
-Use the ```<nav>``` tag and insert ```<elem onclick="toggle_menu()"></elem>``` as first element.  
+Use the ```<nav>``` tag.
 Then insert elements with the tag ```<elem>```.
 Add  ```onclick="windowChange(window_num)"``` to the ```<elem>``` tag and insert the number of the window starting with 0.  
 
@@ -186,6 +190,7 @@ The ListView is similar to a table with three columns. It has an icon image, the
 ```
 
 ## File Input
+
 We've styled a ```<input type="file">``` button which is normally very difficult because you cannot style it with a CSS class. THis is the workaround using a second Button and adding the function with JQuery: First you have to implement JQuery in the ```<head>```:
 ```
 <script src="https://code.jquery.com/jquery-latest.js"></script>
@@ -201,4 +206,14 @@ Add the input and the JQuery-script in the ```<body>```:
         $('#input-file').trigger('click');
     });
 </script>
+```
+
+## Download-window
+
+We've added a Download-window which looks good and is very easy to implement with javaScript.  
+The only thing you have to do is to add a onclick-event to your element which runs the function download_window().
+
+**Example:**
+```
+<button onclick="download_window('source', 'image', 'title')">
 ```

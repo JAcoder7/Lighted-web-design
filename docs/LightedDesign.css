@@ -1,11 +1,27 @@
 /* The CSS-file from the NJ-web-design */
 
+:root {
+    --edge-blue-rest: #0070C6;
+    --edge-white: #FFFFFF;
+    --edge-border-rest: #c5c5c5;
+    --edge-blue-pressed: #1081D7;
+    --edge-border-hover: #949494;
+    --edge-black: black;
+
+    --lwd-blue: #0078D4;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
     background-color: #faf9f8;
 }
 
+.acrylic.light {
+    background-color: rgba(255, 255, 255, 0.85);
+    -webkit-backdrop-filter: blur(10px) saturate(125%);
+    backdrop-filter: blur(10px) saturate(125%);
+}
 
 /* header *************************************/
 h1 {
@@ -25,6 +41,7 @@ button {
     padding: 6pt 23pt 6pt 23pt;
     border: none;
     border-radius: 3pt;
+    cursor: pointer;
 }
 
 button:hover {
@@ -44,6 +61,42 @@ input[type='text'] {
     width: 150pt;
     height: 17pt;
 }
+
+input[type='range'] {
+    border-radius: 5pt;
+    -webkit-appearance: none;
+    width: 150pt;
+    height: 4pt;
+    background: var(--edge-border-rest);
+    outline: none;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    background: #0078D4;
+    cursor: pointer;
+}
+
+input[type='range']::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    background: #0078D4;
+    cursor: pointer;
+}
+
+input[type='range']::-moz-range-thumb:hover {background: #006cbe;}
+input[type='range']::-moz-range-thumb:active {background: #006cbe;}
+
+
 
 #errorOutput {
     color: red;
@@ -75,14 +128,16 @@ input[type='checkbox'] {
 /* progressbar *****************************/
 div.progressbar {
     width: 150pt;
-    height: 17pt;
+    height: 4pt;
+    border-radius: 3px;
     background-color: rgb(191, 191, 191);
 }
 
 div.progressbar div {
     width: 0pt;
     height: 100%;
-    background-color: rgb(0, 176, 240);
+    border-radius: 3px;
+    background-color: var(--lwd-blue);
     transition: width 1s;
 }
 
@@ -94,24 +149,38 @@ nav {
     z-index: 200;
     width: 100%;
     height: 50pt;
-    background-color: #fff;
     box-shadow: 0 1.6px 3.8px 0 rgba(0,0,0,0.2);
+    background-color: rgba(255, 255, 255, 0.85);
+    -webkit-backdrop-filter: blur(10px) saturate(125%);
+    backdrop-filter: blur(10px) notsaturate(125%);
     display: flex;
     z-index: 100;
 }
 
 nav elem {
-    width: 200pt;
+    min-width: 130pt;
     text-align: center;
     cursor: pointer;
-    font-size: 13pt;
-    padding-top: 18.5pt;
-    padding-bottom: 18.5pt;
+    font-size: 12pt;
+    padding-top: 17pt;
+    padding-bottom: 17pt;
+    padding-left: 15pt;
+    padding-right: 15pt;
+}
+
+nav elem:hover {
+    background-color: rgba(221, 221, 221, 0.534);
 }
 
 nav elem:first-child {
     font-family: segoe mdl2 assets;
+    font-size: 16pt;
 }
+
+nav elem:first-child:hover {
+    background-color: rgba(255, 255, 255, 0);
+}
+
 
 @media screen and (min-width: 400pt) {  /* standart-device */
     nav {
@@ -131,10 +200,6 @@ nav elem:first-child {
         left: -30pt
     }
 
-    nav elem:nth-child(2) {
-        font-family: 'Segoe UI semibold';
-        font-size: 16pt;
-    }
 }
 
 @media screen and (max-width: 400pt) {  /* mobile-device */
@@ -145,11 +210,13 @@ nav elem:first-child {
         flex-direction: column;
         transition: height 0.3s;
     }
+
     nav elem {
         padding-left: 20pt;
         visibility: hidden;
         text-align: left;
     }
+
     nav elem:first-child {
         position: relative;
         visibility: visible;
@@ -248,7 +315,7 @@ nav elem:first-child {
     font-family: segoe mdl2 assets;
     background-color: rgb(249, 248, 246);
     box-shadow: 0px 0px 10pt 1px rgba(0, 0, 0, 0.3);
-    padding: 20pt;
+    padding: 15pt;
     font-size: 18pt;
     margin: 20pt;
     border-radius: 50pt;
@@ -264,7 +331,7 @@ img.lwd {
 .note {
     padding-left: 10pt;
     border-left: solid;
-    border-color: #0078D4;
+    border-color: var(--lwd-blue);
     font-style: italic;
 }
 
@@ -315,7 +382,7 @@ table.listView {
     border-spacing: 0pt;
 }
 
-td {border-bottom: solid 1pt rgb(196, 196, 196);}
+table.listView td {border-bottom: solid 1pt rgb(196, 196, 196);}
 
 .listView tr td {width: 280pt; padding-right: 5pt;}
 .listView tr td:first-child {padding: 5pt;width: 0pt;}
@@ -332,6 +399,158 @@ td {border-bottom: solid 1pt rgb(196, 196, 196);}
 #button-file:hover {
     cursor: pointer;
     background-color: rgb(223, 223, 223)
+}
+
+
+/* download-window ***********************************/
+#download_window {
+    z-index: 300;
+}
+
+#download_window_background {
+    width: calc(100%);
+    height: 100%;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(5px) saturate(125%);
+    backdrop-filter: blur(5px) saturate(125%);
+    left: 0;
+    top: 0;
+    text-align: center;
+    z-index: 301;
+    cursor: pointer;
+}
+
+#download_window-pane1 {
+    background-color: rgb(242, 241, 239);
+    width: 500px;
+    height: 550px;
+    position: fixed;
+    top: calc(50% - 250px);
+    left: calc(50% - 250px);
+    box-shadow: 0px 0px 10pt 1px rgba(0, 0, 0, 0.3);
+    z-index: 302;
+    display: table;
+}
+
+#download_window_name {
+    text-align: left;
+    font-family: segoe ui semibold;
+    font-size: 18px;
+    margin: 23px;
+    float: left;
+}
+
+#download_window_button button {
+    background-color: --lwd-blue;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 16px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10pt 1px rgba(0, 0, 0, 0.3);
+}
+
+#download_window_pane2 {
+    background-color: rgb(249, 248, 246);
+    width: 500px;
+    height: 480px;
+    position: fixed;
+    top: calc(50% - 180px);
+    left: calc(50% - 250px);
+    box-shadow: 0px 2px 10pt 1px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* ToggleSwitch ***********************************/
+
+button.toggleSwitch {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    outline: inherit;
+    padding: 0;
+    position: relative;
+    width: 44px;
+    height: 20px;
+    z-index: 0;
+}
+
+#bar {
+    background-color: var(--edge-white);
+    border-radius: 20px;
+    border: 1px solid var(--edge-border-rest);
+    height: 18px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    transition: background-color linear 0.08s;
+    width: 42px;
+    z-index: 0;
+}
+
+#bar:active {
+    background: var(--edge-blue-pressed);
+    border: 1px solid var(--edge-blue-pressed);
+    outline: none;
+}
+
+#bar:hover {
+    border: 1px solid var(--edge-border-hover);
+}
+
+#knob {
+    background-color: var(--edge-black);
+    border-radius: 50%;
+    border: 1px solid var(--edge-black);
+    display: block;
+    height: 8px;
+    left: 5px;
+    position: relative;
+    top: 0px;
+    transition: transform linear 1s, background-color linear 80ms;
+    width: 8px;
+    z-index: 1;
+}
+
+#bar[checked="true"] {
+    background-color: #0070C6;
+    border: 1px solid var(--edge-blue-rest);
+}
+
+#knob[checked="true"] {
+    background-color: white;
+    border: 1px solid white;
+    transform: translate3d(24px, 0, 0);
+}
+
+
+/*scrollbar****************************************************/
+::-webkit-scrollbar {
+    width: 7pt;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(240, 240, 240);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #55aaeb;
+    height: 10pt;
+    border-radius: 5pt;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #1081D7;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #0070C6;
 }
 
 /* Gallery-Image **********************************/
